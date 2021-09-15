@@ -1,0 +1,7 @@
+#+TITLE: 13 09 21
+* Actividade Metodos Apuntes
+- Lo que devuelve un mensaje es un objeto
+- Un metodo es la implementacion de un mensaje
+- Relacion mensaje y metodo es uno a muchos, ya que un mensaje puede tener muchas implementaciones
+* Paper quiz
+https://quizizz.com/join/game/U2FsdGVkX1%252FCpd7CSza9N39kDgI0%252BwifmsIqKU%252Ban2Zw6BGoApmLrbrrnFmf0lkhT5tDMCKsFYI%252BHR0VPLZz%252BqPBQiG7YmQUvsu%252FvMFOXkk%253D?gameType=live
