@@ -1,0 +1,145 @@
+#+TITLE: 06 09 21
+* Sobre la materia
+- Sentar las bases para desarrollar software a mediana/gran escala
+- Foco en lo técnico
+- Programacion Orientada a Objetos (vision fundacional)
+  + Basada en la vision que tenian los creadores
+- Menos algoritmos, mas programacion
+* Programa
+- Introduccion a la materia (hoy)
+- Introduccion al paradigma fundacional de Objetos (8 clases)
+- Tecnicas practicas y Heuristicas de Diseño (9 clases)
+Primer parcial Sabado 6/11 - 9 hrs ----- 1er Parcial
+- TDD (4 clases)
+- Modelo avanzado (5 clases)
+Segundo parcial Lunes 13/12 - 19 hrs ----- 2do Parcial
+* Dinamica
+- Clases
+  + Teoricas
+  + Practicas
+  + Espiritu: mix teorico-practico
+- Ejercicios en maquina: Breakout rooms
+- Lectura de Papers (evaluados)
+- Parciales individuales
+* Los ejercicios ( tps )
+1. Programacion de a pares, en maquina
+2. Se presentan en clase
+3. Mitad en clase / mitad en casa
+4. Checkpoints
+5. Se entregan para una fecha (antes de la clase)
+6. Puesta en comun y se muestra (una)
+   solucion de la catedra
+7. Correccion a ustedes
+* Entorno/ Lenguaje
+- Entorno Cuis University
+  + Lenguaje Smalltalk
+  + Cuis + Herramientas pedagogicas
+- Aprovechar el tiempo (minimiza complejidad accidental)
+- Smalltalk: Creado por quienesdefinieron el paradigma
+- Lo aprendido es independiente del entorno / lenguaje
+* Necesitan
+- PC (GNU/Linux | MacOs | Windows)
+  + Zoom
+  + Git
+- Cuenta de Zoom
+- Cuenta de GitHub
+* Regimen de aprobacion
+- 2 parciales
+  + Primer parcial a 2/3 de la cursada
+  + Segundo parcial al final (integrador)
+  + Practicos, en maquina
+- Aprobacion: Ambos parciales >= 4
+- Recuperatorio unificado (dos chances, al final de la cursada)
+* Promocion
+- Promedio entre notas de parciles >= 7
+- Promedio entre notas de ejercicios >= 7
+- Se redondea al entero mas cercano, y .5 se redondea para arriba
+  + 6.50 es 7 pero 6.42 es 6. (REDONDEAR de Excel)
+- Nota final = Promedio (redondeado) entre: promedio parciales y promedio ejercicios
+- Se puede promocionar aun recuperando
+  + El recuperatorio reemplaza la nota del parcial ( si se recupera ambos, reemplaza solo la nota de 2do )
+* Puntos adicionales
+- Puntos adicionales ( a definir pronto ) en nota del proximo parcial por Quiz de la lectura de paper
+- Punto adicional a la nota de la cursada por aporte a Cuis (aceptado por la comunidad). Limite: 2 puntos en total
+- Solo sirven para la promocion (NO para aprobar los parciales)
+* Que es un software?
+Secuencia de instrucciones que dada una entrada genera una salida - Definicion Clasica
+Modelo computable de un dominio de problema de la realidad - Nuestra definicion
+** Nuestra definicion
+- Realidad
+  Todo aquello que podemos percibir, hablar sobre, etc
+- Dominio de problema
+  Un recorte de esa realidad
+- Modelo
+  Representacion de aquello que se modela
+- Computable
+  Que ejecuta en una maquina
+** Trabajo como desarrollador
+Visualizar el dominio del problema e identificar un modelo acorde para la solucion
+* Buen model?
+- Funcional
+  Cuan bien representa el dominio
+- Descriptivo
+  Que tan bien describe/ cuan claro es/ que tan entendible es
+- Implementativo
+  Cuan performante es/ cuan bien utiliza los recursos de la maquina
+* Eje funcional
+- Representacion 1:1 de los entes de la realidad
+- Si aparece algo nuevo, en mi modelo aparece una nueva representacion
+- Si algo cambia, solo cambia ese "algo"
+- Parte observacional del desarrollo
+* Eje descriptivo
+- Claridad del codigo
+- Entendible por otros
+- Lenguaje del negocio
+- Buenos nombres
+- Parte "artistica" del desarrollo
+* Eje implementativo
+- Funcionamiento en una maquina
+- Performance
+- Optimizacion
+- Parte "detallista" del desarrollo
+* No Silver Bullet ( paper )
+- Complejidad
+  Construccion de gran tamaño sin 2 partes iguales
+- Conformidad
+  Se modela algo arbitrario, definido por personas
+- Variabilidad
+  Se espera que se adapte al cambio
+- Invisibilidad
+  Construimos algo que se puede ver
+* Complejidad
+** Esencial
+- El problema en esencia es complejo (independiente de su reprensentacion)
+- No hay 2 partes iguales
+- Crece exponencialmente
+** Accidental
+- Todo lo que no se inherente al problema que intentamos resolver
+- Lo que surge por ejecutarse en una maquina
+* Que es el Desarrollo de software ?
+** Es una ingenieria
+- Analogia con ingenierias clasicas: Cuestionable
+- Termino "Ingenieria de Software": Congresos de software de la OTAN (Año '68).
+  Contexto: Crisis del software
+In science if you know what you are doing you should not be doing it. In engineering if you do not know what you are doinf you should not be doing it. - The art of doing science and engeniering
+** Waterfall (Royce '70)
+1. System requirements
+2. Software requirements
+3. Analysis
+4. Program design
+5. Coding
+6. Testing
+7. Operations
+I belive in this councept, but the implementation described above is risky and invites failure.
+** Manifiesto de el desarrollo Agil de software
+** Extreme programming
+Desarrollo como un proceso iterativo e incremental
+** Feedback Inmediato
+* Conclusiones
+- Software = Modelo computable
+- Desarrollo de Sotfware = Proceso
+  + Algo unico y particulas
+  + Proceso de aprendizaje
+  + Iteractivo e incremental
+  + Feedback es fundamental
+  + Aceptar el cambio
