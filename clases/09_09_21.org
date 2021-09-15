@@ -1,0 +1,64 @@
+#+TITLE: 09 09 21
+* (Breve) Historia de smalltalk
+** Origen OOP
+Nygaard y Dahl 1967
+E. Dijksta 1968
+Dahl, Dijkstra, Hoare 1972
+** Xerox Parc (1970)
+Xerox hizo un centro de investigacion
+De donde salen cosas como :
+- Impresora lazer
+- Ethernet
+- Gui
+- Model, view, controller
+- Etc...
+** Smalltalk (1969-)
+*** Alan Key
+- Dynabook (Empezo a desarrollar esta idea)
+  + Tablet
+  + Para chicos
+- Xerox Alto (Ayudo a desarrollar)
+- Smalltalk-80 (1969 - 1980 desarrollo)
+  + El entorno que se termino utilizando en Xerox parc
+  + Entorno pensado para aprender y desarrollar con esta filosofia de OOP
+  + OOP como forma de programar ideada por Alan Key
+  + Utilizado en la Xerox Alto
+  + Ideado por Alan Key
+** Steve jobs en xerox parc (1979)
+- Quedo facinado por la GUI de xerox
+- Recreo la GUI de xerox y la recreo para todos sus productos
+- Le pidieron la demo a Xerox y se la dieron
+** Filosodia de Smalltalk
+- Ambiente de aprendizaje - Piaget
+- Entorno + Lenguaje
+- Codigo abierto (desde los '70)
+** Caracteristicas de Smalltalk
+- Sintaxis simple/ minimal
+- Ambiente vivo
+- Meta circular: Definido sobre si mismo
+  + Smalltalk esta hecho en smalltalk
+  + TODO: Hacer compilador de lisp en lisp
+    - Lisp tambien es meta circular
+* Usando Cuis
+** Config
+preferences>click to focus
+Preferences disable: #fullScreenLeavesDeskMargins
+Preferences disable: #fullScreenLeavesDeskMargins
+** Short cuts utilies
+Control + D ejecutar lo seleccionado
+Control + i se pude ispeccionar
+** Workspace
+- Uno puede escribir algo y apretar boton derecho para ver los short curts
+- control y pocion
+** Object browser
+- Tiene una iterfaz para editar codigo y workspace
+- Lugar para crear objetos
+** SmallTallk lang
+- Se puede editar el return con ^
+- Para pasarle un parametro a un metodo poner ":" y el parametro
+- IfTrue, IfFalse:
+- [] esto es un bloque de codigo
+- Para llamar el metodo de un objeto se hacer objeto metodo en vez de objeto.metodo() como en otros lenguajes
+- Fin de sentencia en smalltalk es el punto
+- Para sacar codigo de Smalltalk se hace fileOut
+  + Esto exporta un archivo .st
