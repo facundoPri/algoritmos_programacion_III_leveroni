@@ -43,7 +43,6 @@ De donde salen cosas como :
 ** Config
 preferences>click to focus
 Preferences disable: #fullScreenLeavesDeskMargins
-Preferences disable: #fullScreenLeavesDeskMargins
 ** Short cuts utilies
 Control + D ejecutar lo seleccionado
 Control + i se pude ispeccionar
