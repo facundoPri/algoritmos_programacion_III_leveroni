@@ -1,0 +1,23 @@
+#+TITLE: 16 09 21
+* Repaso
+** Software/ Programa:
+- Modelo computable de un dominio de problema de la realidad (vs Secuencia de instrucciones)
+- Paradigma de Objetos: Objetos que colaboran entre si mediante el envio de mensajes para resolver un problema
+** Desarrollo de software:
+- Proceso de aprendizaje, iterativo e incremental
+- Eje de Descriptivo, funcional e implementativo. Foco en el eje descriptivo y funcional
+** Filosofia Smalltalk:
+- Ambiente de aprendizaje
+- Fundacional de paradigma
+- Ambiente vivo
+- Imagem + VM
+- Feedbak imediato
+** Conceptos del paradigma
+*** Objeto:
+- Representacion de un ente de un dominio de problema
+- Se define a partir de los mensajes que sabes responder
+*** Mensaje:
+- Define al QUE de un objeto
+- Define una responsabilidad
+- Comportamiento definido a traves de un metodo asociado a un objeto con el mismo nombre que el mensaje
+- Conjunto de mensajes define la escencia de un objeto
