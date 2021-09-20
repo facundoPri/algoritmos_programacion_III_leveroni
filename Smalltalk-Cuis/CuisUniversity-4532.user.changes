@@ -1,0 +1,81 @@
+
+
+----QUIT----(9 March 2021 14:58:42) CuisUniversity-4532.image priorSource: 13044060!
+
+----STARTUP---- (9 March 2021 14:58:43) as /Users/hernan/Documents/Cuis/5.0-64Bits/Cuis-University-Installer/CuisUniversity-4532.image!
+
+
+----QUIT----(9 March 2021 14:58:43) CuisUniversity-4532.image priorSource: 16885479!
+
+----STARTUP---- (19 September 2021 23:34:40) as /home/facupri/Documentos/Facultad/algoritmos_programacion_III_leveroni/Smalltalk-Cuis/CuisUniversity-4532.image!
+
+
+Preferences disable: #fullScreenLeavesDeskMargins!
+
+Preferences disable: #fullScreenLeavesDeskMargins!
+
+----End fileIn of /home/facupri/Documentos/Facultad/algoritmos_programacion_III_leveroni/Smalltalk-Cuis/Packages/System/Collections-CompactArrays.pck.st----!
+
+----End fileIn of /home/facupri/Documentos/Facultad/algoritmos_programacion_III_leveroni/Smalltalk-Cuis/Packages/Features/VectorGraphics.pck.st----!
+
+----STARTUP---- (19 September 2021 23:42:59) as /home/facupri/Documentos/Facultad/algoritmos_programacion_III_leveroni/Smalltalk-Cuis/CuisUniversity-4532.image!
+
+
+----End fileIn of /home/facupri/Documentos/Facultad/algoritmos_programacion_III_leveroni/Smalltalk-Cuis/Packages/System/Collections-CompactArrays.pck.st----!
+
+----End fileIn of /home/facupri/Documentos/Facultad/algoritmos_programacion_III_leveroni/Smalltalk-Cuis/Packages/Features/VectorGraphics.pck.st----!
+
+CodePackage subclass: #FileOutReworkPackage
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'FileOutRework'!
+
+!classDefinition: #FileOutReworkPackage category: 'FileOutRework' stamp: 'Install-FileOutRework 9/19/2021 23:46:13'!
+CodePackage subclass: #FileOutReworkPackage
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'FileOutRework'!
+
+FileOutReworkPackage class
+	instanceVariableNames: ''!
+
+!classDefinition: 'FileOutReworkPackage class' category: 'FileOutRework' stamp: 'Install-FileOutRework 9/19/2021 23:46:13'!
+FileOutReworkPackage class
+	instanceVariableNames: ''!
+
+----End fileIn of /home/facupri/Documentos/Facultad/algoritmos_programacion_III_leveroni/FileOutRework.pck.st----!
+
+Preferences disable: #fullScreenLeavesDeskMargins!
+
+----QUIT----(20 September 2021 00:00:54) CuisUniversity-4532.image priorSource: 16885703!
+
+----STARTUP---- (20 September 2021 00:05:59) as /home/facupri/Documentos/Facultad/algoritmos_programacion_III_leveroni/Smalltalk-Cuis/CuisUniversity-4532.image!
+
+
+'hello'!
+
+ 'hello' !
+
+ 'hello' !
+
+ 'hello' !
+
+ 'hello' !
+
+ 'hello' !
+
+'hello'!
+
+ 'hello' !
+
+ 'hello' !
+
+ 'hello' !
+
+ 'hello' !
+
+----SNAPSHOT----(20 September 2021 00:14:36) CuisUniversity-4532.image priorSource: 17319451!
+
+----QUIT----(20 September 2021 00:14:40) CuisUniversity-4532.image priorSource: 17319833!
