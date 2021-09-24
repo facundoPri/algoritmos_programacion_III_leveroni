@@ -1,0 +1,18 @@
+#+TITLE: 23 09 21
+* Closure
+Bloque de codigo adentro de [ ]
+Parecido a una funcion lambda
+Devuelve la ultima linea de codigo
+* Ejercicio semaforo
+Tips:
+- Cuando hay codigo repetido significa que falta una abstraccion
+- Testear todo el tiempo
+- Entorno interactivo (interaccion instantanea)
+* Algoritmo de quitar codigo reperido
+- Copiar lo repetido a un lugar
+- Parametrizar lo que cambia
+- Nombrar la nueva abstraccion
+- Reemplazar lo repetido para la nueva abstraccion
+* Tarea lunes
+- No silver bullet
+- Formulatio
