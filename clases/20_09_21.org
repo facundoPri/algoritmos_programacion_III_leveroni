@@ -1,0 +1,16 @@
+#+TITLE: 20 09 21
+* Que es una colaboracion
+Es lo que se produce al enviar un mensaje a un objeto
+Mensaje unario: o m
+- Emisor: o (objeto)
+- Mensaje: m
+- Receptor: nosotros
+** 4 Caracteristicas de las colaboraciones
+1. Son Sincronicas (vs Asincronico)
+2. Son Dirigidas (vs Broadcast)
+   + Van destinadas a un objeto en especifico
+3. Siempre existe un resultado
+   + Si no se especifica el return este sera self (smalltalk)
+4. Receptor desconoce al emisor
+   + Responde siempre igual
+   + El resultado no depende del emisor
