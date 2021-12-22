@@ -1,0 +1,27 @@
+#+TITLE: 30 09 21
+*  Heuristica de diseño
+- Relacion 1:1 entre objeto y ente de la realidad
+- Buscamos que el conjunto de mensajes sea minimal -> Bajo acopiamiento, alta cohesion
+- Guiarnos por el aspecto funcional conduce a buenos modelos
+- Codigo repetido: Señal de que nos falta una abstraccion
+* Ejercicio Semaforo
+- Hacer con que los mensajes hablame mas de la logica del negocio
+* Organizacion de conocimiento
+** 2 paradigmas
+- Clasica/ Aristoteles
+- Moderna/ Wittgenstein
+*** Moderna/ Wittgenstein
+- Objetos ejemplares o prototipicos
+  + "Diganme un numero" -> Solemos pensar del 0 a 9 y el resto como composiciones de estos
+  + Que es un "Juego"?
+- Idea de un Objeto prototipico: Relacion de "parentesco"
+- Como aplica al ejercicio del Semaforo?
+*** Clasica/ Aristoteles
+**** Subclasificacion vs prototipado
+- Clasificacion: Cuesta ponerle nombre 1ero a lo mas general...
+- Prototipado:
+  + Mas simple (no hay clases)
+  + Me permite modelar objetos unicos (ej: true y false)
+- Pero igual hablamos de conceptos...
+  + Modelar "rasgos" (traits)
+- Se puede implementar clases a partir de prototipos y viceversa (aunque lo primero es mas natural/facil)

@@ -1,0 +1,3576 @@
+
+
+----QUIT----(9 March 2021 14:58:42) CuisUniversity-4532.image priorSource: 13044060!
+
+----STARTUP---- (9 March 2021 14:58:43) as /Users/hernan/Documents/Cuis/5.0-64Bits/Cuis-University-Installer/CuisUniversity-4532.image!
+
+
+----QUIT----(9 March 2021 14:58:43) CuisUniversity-4532.image priorSource: 16885479!
+
+----STARTUP---- (19 September 2021 23:34:40) as /home/facupri/Documentos/Facultad/algoritmos_programacion_III_leveroni/Smalltalk-Cuis/CuisUniversity-4532.image!
+
+
+Preferences disable: #fullScreenLeavesDeskMargins!
+
+Preferences disable: #fullScreenLeavesDeskMargins!
+
+----End fileIn of /home/facupri/Documentos/Facultad/algoritmos_programacion_III_leveroni/Smalltalk-Cuis/Packages/System/Collections-CompactArrays.pck.st----!
+
+----End fileIn of /home/facupri/Documentos/Facultad/algoritmos_programacion_III_leveroni/Smalltalk-Cuis/Packages/Features/VectorGraphics.pck.st----!
+
+----STARTUP---- (19 September 2021 23:42:59) as /home/facupri/Documentos/Facultad/algoritmos_programacion_III_leveroni/Smalltalk-Cuis/CuisUniversity-4532.image!
+
+
+----End fileIn of /home/facupri/Documentos/Facultad/algoritmos_programacion_III_leveroni/Smalltalk-Cuis/Packages/System/Collections-CompactArrays.pck.st----!
+
+----End fileIn of /home/facupri/Documentos/Facultad/algoritmos_programacion_III_leveroni/Smalltalk-Cuis/Packages/Features/VectorGraphics.pck.st----!
+
+CodePackage subclass: #FileOutReworkPackage
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'FileOutRework'!
+
+!classDefinition: #FileOutReworkPackage category: 'FileOutRework' stamp: 'Install-FileOutRework 9/19/2021 23:46:13'!
+CodePackage subclass: #FileOutReworkPackage
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'FileOutRework'!
+
+FileOutReworkPackage class
+	instanceVariableNames: ''!
+
+!classDefinition: 'FileOutReworkPackage class' category: 'FileOutRework' stamp: 'Install-FileOutRework 9/19/2021 23:46:13'!
+FileOutReworkPackage class
+	instanceVariableNames: ''!
+
+----End fileIn of /home/facupri/Documentos/Facultad/algoritmos_programacion_III_leveroni/FileOutRework.pck.st----!
+
+Preferences disable: #fullScreenLeavesDeskMargins!
+
+----QUIT----(20 September 2021 00:00:54) CuisUniversity-4532.image priorSource: 16885703!
+
+----STARTUP---- (13 December 2021 19:37:49) as /home/facupri/Documentos/Facultad/algoritmos_programacion_III_leveroni/Smalltalk-Cuis-parcial/CuisUniversity-4532.image!
+
+
+----End fileIn of /home/facupri/Descargas/AlgoIII-PNJ-2021-2C-2doParcial.Inicial.st----!
+
+TestCase subclass: #RegionTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+
+!classDefinition: #RegionTest category: 'AlgoIII-PNJ-2021-2C-2doParcial' stamp: 'FP 12/13/2021 19:55:42'!
+TestCase subclass: #RegionTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+
+!classRenamed: #RegionTest as: #OpinionDeUnaRegionTest stamp: 'FP 12/13/2021 19:58:48'!
+Smalltalk renameClassNamed: #RegionTest as: #OpinionDeUnaRegionTest!
+
+!classDefinition: #OpinionDeUnaRegion category: 'AlgoIII-PNJ-2021-2C-2doParcial' stamp: 'FP 12/13/2021 20:07:05'!
+Object subclass: #OpinionDeUnaRegion
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+!OpinionDeUnaRegionTest methodsFor: 'nil' stamp: 'FP 12/13/2021 20:06:58'!
+test01LaOpinionDeUnaRegionTieneQueTenerAlMenosUnSeguidor
+
+	self 
+		should: [OpinionDeUnaRegion new.]
+		raise: Error - MessageNotUnderstood 
+		withExceptionDo: [ :anError | 
+			self assert: OpinionDeUnaRegion debeTenerUnSeguidorMensajeError equals: anError messageText.
+		].! !
+!OpinionDeUnaRegion class methodsFor: 'nil' stamp: 'FP 12/13/2021 20:08:02'!
+debeTenerUnSeguidorMensajeError
+
+	^'Opinion de una Region debe tener por lo menos un seguidor'! !
+
+!testRun: #OpinionDeUnaRegionTest #test01LaOpinionDeUnaRegionTieneQueTenerAlMenosUnSeguidor stamp: 'FP 12/13/2021 20:08:05'!
+FAILURE!
+
+!methodRemoval: OpinionDeUnaRegionTest #test01LaOpinionDeUnaRegionTieneQueTenerAlMenosUnSeguidor stamp: 'FP 12/13/2021 20:14:20'!
+test01LaOpinionDeUnaRegionTieneQueTenerAlMenosUnSeguidor
+
+	self 
+		should: [OpinionDeUnaRegion new.]
+		raise: Error - MessageNotUnderstood 
+		withExceptionDo: [ :anError | 
+			self assert: OpinionDeUnaRegion debeTenerUnSeguidorMensajeError equals: anError messageText.
+		].!
+!OpinionDeUnaRegionTest methodsFor: 'no messages' stamp: 'FP 12/13/2021 20:19:53'!
+test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido
+
+	| opinionDeRegionChata opinionDeRioVerde |
+	opinionDeRioVerde := OpinionDeUnPueblo new.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDeRioVerde.
+	
+	self assert: false equals: (opinionDeRegionChata opinionDe: #Hamilton).! !
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 20:20:13'!
+ERROR!
+!OpinionDeUnaRegion class methodsFor: 'instance creation' stamp: 'FP 12/13/2021 20:20:22'!
+conUnSeguidor: anOpinionDeUnPueblo 
+	"DO NOT FORGET TO RENAME COLLABORATORS AND REMOVE THIS COMMENT!!!!"
+	self shouldBeImplemented.
+	^self new initializeConUnSeguidor: anOpinionDeUnPueblo ! !
+!OpinionDeUnaRegion class methodsFor: 'instance creation' stamp: 'FP 12/13/2021 20:20:34' prior: 50873920!
+conUnSeguidor: anOpinionDeUnPueblo 
+
+	^self new initializeConUnSeguidor: anOpinionDeUnPueblo ! !
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 20:20:35'!
+ERROR!
+
+!classDefinition: #OpinionDeUnaRegion category: 'AlgoIII-PNJ-2021-2C-2doParcial' stamp: 'FP 12/13/2021 20:20:59'!
+Object subclass: #OpinionDeUnaRegion
+	instanceVariableNames: 'opinionDeUnPueblo'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+!OpinionDeUnaRegion methodsFor: 'initialize' stamp: 'FP 12/13/2021 20:20:59'!
+initializeConUnSeguidor: anOpinionDeUnPueblo 
+	self shouldBeImplemented.
+	opinionDeUnPueblo := anOpinionDeUnPueblo.! !
+
+!classDefinition: #OpinionDeUnaRegion category: 'AlgoIII-PNJ-2021-2C-2doParcial' stamp: 'FP 12/13/2021 20:21:34'!
+Object subclass: #OpinionDeUnaRegion
+	instanceVariableNames: 'opinionDeUnPueblo seguidores'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+!OpinionDeUnaRegion methodsFor: 'initialize' stamp: 'FP 12/13/2021 20:21:32' prior: 50873949!
+initializeConUnSeguidor: anOpinionDeUnPueblo 
+	
+	seguidores := anOpinionDeUnPueblo.! !
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 20:21:37'!
+ERROR!
+!OpinionDeUnaRegion methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 20:21:50'!
+opinionDe: aSymbol 
+	self shouldBeImplemented.! !
+!OpinionDeUnaRegion methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 20:21:56' prior: 50873975!
+opinionDe: aSymbol 
+	^false! !
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 20:21:58'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 20:21:58'!
+PASSED!
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 20:23:08'!
+test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido
+
+	| opinionDeRegionChata opinionDeRioVerde |
+	opinionDeRioVerde := OpinionDeUnPueblo new.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDeRioVerde.
+	
+	self assert: false equals: (opinionDeRegionChata opinionDe: #Hamilton).! !
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 20:25:54' prior: 50873993!
+test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido
+
+	| opinionDeRegionDelBajo opinionDeRiverwood opinionDeRegionChata opinionDeRioVerde |
+	opinionDeRiverwood := OpinionDeUnPueblo new.
+	opinionDeRiverwood verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionDelBajo := OpinionDeUnaRegion conUnSeguidor: opinionDeRioVerde.
+	
+	self assert: true equals: (opinionDeRegionChata opinionDe: #Hamilton).! !
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 20:26:19' prior: 50874007!
+test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido
+
+	| opinionDeRegionDelBajo opinionDeRiverwood |
+	opinionDeRiverwood := OpinionDeUnPueblo new.
+	opinionDeRiverwood verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionDelBajo := OpinionDeUnaRegion conUnSeguidor: opinionDeRiverwood.
+	
+	self assert: true equals: (opinionDeRegionDelBajo opinionDe: #Hamilton).! !
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 20:26:43'!
+pjHamilton
+	^#Hamilton.! !
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 20:26:57' prior: 50873902!
+test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido
+
+	| opinionDeRegionChata opinionDeRioVerde |
+	opinionDeRioVerde := OpinionDeUnPueblo new.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDeRioVerde.
+	
+	self assert: false equals: (opinionDeRegionChata opinionDe: self pjHamilton).! !
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 20:27:07'!
+FAILURE!
+!OpinionDeUnaRegion methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 20:27:33' prior: 50873980!
+opinionDe: unPersonaje
+	^false! !
+!OpinionDeUnaRegion methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 20:27:43' prior: 50874062!
+opinionDe: unPersonajeJugador
+	^false! !
+!OpinionDeUnaRegion methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 20:28:24' prior: 50874067!
+opinionDe: unPersonajeJugador
+	^seguidores opinionDe: unPersonajeJugador ! !
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 20:28:25'!
+FAILURE!
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 20:28:45' prior: 50874024!
+test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido
+
+	| opinionDeRegionDelBajo opinionDeRiverwood |
+	opinionDeRiverwood := OpinionDeUnPueblo new.
+	opinionDeRiverwood verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionDelBajo := OpinionDeUnaRegion conUnSeguidor: opinionDeRiverwood.
+	
+	self assert: Prometedor equals: (opinionDeRegionDelBajo opinionDe: #Hamilton).! !
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 20:28:49'!
+FAILURE!
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 20:29:03' prior: 50874044!
+test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido
+
+	| opinionDeRegionChata opinionDeRioVerde |
+	opinionDeRioVerde := OpinionDeUnPueblo new.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDeRioVerde.
+	
+	self assert: Desconocido equals: (opinionDeRegionChata opinionDe: self pjHamilton).! !
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 20:29:05'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 20:29:15'!
+FAILURE!
+
+opinionDeRegionChata opinionDe: self pjHamilton!
+
+opinionDeRegionChata opinionDe: self pjHamilton!
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 20:29:32' prior: 50874103!
+test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido
+
+	| opinionDeRegionChata opinionDeRioVerde |
+	opinionDeRioVerde := OpinionDeUnPueblo new.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDeRioVerde.
+	
+	self assert: Desconocido new equals: (opinionDeRegionChata opinionDe: self pjHamilton).! !
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 20:29:40' prior: 50874083!
+test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido
+
+	| opinionDeRegionDelBajo opinionDeRiverwood |
+	opinionDeRiverwood := OpinionDeUnPueblo new.
+	opinionDeRiverwood verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionDelBajo := OpinionDeUnaRegion conUnSeguidor: opinionDeRiverwood.
+	
+	self assert: Prometedor new equals: (opinionDeRegionDelBajo opinionDe: #Hamilton).! !
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 20:29:42'!
+FAILURE!
+
+!classDefinition: #OpinionZonas category: 'Objects' stamp: 'FP 12/13/2021 20:32:16'!
+Object subclass: #OpinionZonas
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Objects'!
+
+OpinionZonas subclass: #OpinionDeUnPueblo
+	instanceVariableNames: 'opiniones seguidores pjsDesconocidosConocidosPorPNJs prometedoresConocidosPorPNJsInfluyentes'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+
+!classDefinition: #OpinionDeUnPueblo category: 'AlgoIII-PNJ-2021-2C-2doParcial' stamp: 'FP 12/13/2021 20:32:16'!
+OpinionZonas subclass: #OpinionDeUnPueblo
+	instanceVariableNames: 'opiniones seguidores pjsDesconocidosConocidosPorPNJs prometedoresConocidosPorPNJsInfluyentes'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+
+Object subclass: #OpinionDeUnPueblo
+	instanceVariableNames: 'opiniones seguidores pjsDesconocidosConocidosPorPNJs prometedoresConocidosPorPNJsInfluyentes'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+
+!classDefinition: #OpinionDeUnPueblo category: 'AlgoIII-PNJ-2021-2C-2doParcial' stamp: 'FP 12/13/2021 20:32:41'!
+Object subclass: #OpinionDeUnPueblo
+	instanceVariableNames: 'opiniones seguidores pjsDesconocidosConocidosPorPNJs prometedoresConocidosPorPNJsInfluyentes'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+
+!classRemoval: #OpinionZonas stamp: 'FP 12/13/2021 20:32:46'!
+Object subclass: #OpinionZonas
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Objects'!
+
+Object subclass: #OpinionZonas
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+
+!classDefinition: #OpinionZonas category: 'AlgoIII-PNJ-2021-2C-2doParcial' stamp: 'FP 12/13/2021 20:33:11'!
+Object subclass: #OpinionZonas
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+
+OpinionZonas subclass: #OpinionDeUnaRegion
+	instanceVariableNames: 'opinionDeUnPueblo seguidores'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+
+!classDefinition: #OpinionDeUnaRegion category: 'AlgoIII-PNJ-2021-2C-2doParcial' stamp: 'FP 12/13/2021 20:33:21'!
+OpinionZonas subclass: #OpinionDeUnaRegion
+	instanceVariableNames: 'opinionDeUnPueblo seguidores'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+
+OpinionZonas subclass: #OpinionDeUnPueblo
+	instanceVariableNames: 'opiniones seguidores pjsDesconocidosConocidosPorPNJs prometedoresConocidosPorPNJsInfluyentes'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+
+!classDefinition: #OpinionDeUnPueblo category: 'AlgoIII-PNJ-2021-2C-2doParcial' stamp: 'FP 12/13/2021 20:33:34'!
+OpinionZonas subclass: #OpinionDeUnPueblo
+	instanceVariableNames: 'opiniones seguidores pjsDesconocidosConocidosPorPNJs prometedoresConocidosPorPNJsInfluyentes'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+
+OpinionZonas subclass: #OpinionDeUnaRegion
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+
+!classDefinition: #OpinionDeUnaRegion category: 'AlgoIII-PNJ-2021-2C-2doParcial' stamp: 'FP 12/13/2021 20:34:28'!
+OpinionZonas subclass: #OpinionDeUnaRegion
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+
+OpinionZonas subclass: #OpinionDeUnPueblo
+	instanceVariableNames: 'pjsDesconocidosConocidosPorPNJs prometedoresConocidosPorPNJsInfluyentes'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+
+!classDefinition: #OpinionDeUnPueblo category: 'AlgoIII-PNJ-2021-2C-2doParcial' stamp: 'FP 12/13/2021 20:34:38'!
+OpinionZonas subclass: #OpinionDeUnPueblo
+	instanceVariableNames: 'pjsDesconocidosConocidosPorPNJs prometedoresConocidosPorPNJsInfluyentes'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+!OpinionZonas methodsFor: 'public' stamp: 'FP 12/13/2021 20:34:44'!
+agregarSeguidor: unPersonajeNoJugador 
+	seguidores add: unPersonajeNoJugador.! !
+
+!methodRemoval: OpinionDeUnPueblo #agregarSeguidor: stamp: 'FP 12/13/2021 20:34:44'!
+agregarSeguidor: unPersonajeNoJugador 
+	seguidores add: unPersonajeNoJugador.!
+!OpinionZonas methodsFor: 'public' stamp: 'FP 12/13/2021 20:35:06'!
+esVistoComoPrometedor: unPotencialPersonajeJugadorPrometedor 
+	^ (self opinionDe: unPotencialPersonajeJugadorPrometedor) esPrometedor.! !
+
+!methodRemoval: OpinionDeUnPueblo #esVistoComoPrometedor: stamp: 'FP 12/13/2021 20:35:06'!
+esVistoComoPrometedor: unPotencialPersonajeJugadorPrometedor 
+	^ (self opinionDe: unPotencialPersonajeJugadorPrometedor) esPrometedor.!
+
+!classDefinition: #OpinionZonas category: 'AlgoIII-PNJ-2021-2C-2doParcial' stamp: 'FP 12/13/2021 20:35:47'!
+Object subclass: #OpinionZonas
+	instanceVariableNames: 'opiniones'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+
+!classDefinition: #OpinionZonas category: 'AlgoIII-PNJ-2021-2C-2doParcial' stamp: 'FP 12/13/2021 20:35:49'!
+Object subclass: #OpinionZonas
+	instanceVariableNames: 'opiniones seguidores'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+!OpinionZonas methodsFor: 'public' stamp: 'FP 12/13/2021 20:35:45' overrides: 16896425!
+initialize
+	opiniones := Dictionary new.
+	seguidores := OrderedCollection new.
+	! !
+
+!methodRemoval: OpinionZonas #initialize stamp: 'FP 12/13/2021 20:36:00'!
+initialize
+	opiniones := Dictionary new.
+	seguidores := OrderedCollection new.
+	!
+!OpinionZonas methodsFor: 'public' stamp: 'FP 12/13/2021 20:37:13'!
+opinionDe: unPersonajeJugador
+	^opiniones at: unPersonajeJugador ifAbsent: [self opinionDesconocido]
+! !
+
+!methodRemoval: OpinionDeUnPueblo #opinionDe: stamp: 'FP 12/13/2021 20:37:14'!
+opinionDe: unPersonajeJugador
+	^opiniones at: unPersonajeJugador ifAbsent: [self opinionDesconocido]
+!
+!OpinionZonas methodsFor: 'private' stamp: 'FP 12/13/2021 20:37:19'!
+opinionDesconocido
+	^Desconocido new! !
+
+!methodRemoval: OpinionDeUnPueblo #opinionDesconocido stamp: 'FP 12/13/2021 20:37:19'!
+opinionDesconocido
+	^Desconocido new!
+!OpinionZonas methodsFor: 'private' stamp: 'FP 12/13/2021 20:37:26'!
+opinionPrometedor
+	^Prometedor new! !
+
+!methodRemoval: OpinionDeUnPueblo #opinionPrometedor stamp: 'FP 12/13/2021 20:37:26'!
+opinionPrometedor
+	^Prometedor new!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 20:38:03'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 20:38:03'!
+FAILURE!
+
+!testRun: #DialogosConPNJsTest #test01CuandoElConversadorInteractuaPorPrimeraVezConUnPersonajeLeRespondeConSuPrimerFrase stamp: 'FP 12/13/2021 20:38:14'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test02CuandoElConversadorInteractuaPorSegundaVezConUnPersonajeLeRespondeConSuSegundaFrase stamp: 'FP 12/13/2021 20:38:14'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test03CuandoElConversadorOlvidaInteraccionesPreviasConUnPersonajeAlVolverAInteractuarLeRespondeConSuPrimerFrase stamp: 'FP 12/13/2021 20:38:14'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test04CuandoElConversadorInterctuaYTerminoSuRepertorioDeFrasesConUnPersonajeLeRespondeConSuUltimaFrase stamp: 'FP 12/13/2021 20:38:14'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test05ElConversadorMantieneInteraccionesEnParaleloConDiferentesPersonajes stamp: 'FP 12/13/2021 20:38:14'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test06ElConversadorMantieneInteraccionesCompletasEnParaleloConDiferentesPersonajes stamp: 'FP 12/13/2021 20:38:14'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test07CuandoElConversadorInteractuaPorPrimeraVezConUnPersonajeCalificadoPorElPuebloComoPrometedorLeRespondeConSuPrimerFrase stamp: 'FP 12/13/2021 20:38:14'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test08CuandoElConversadorInteractuaPorSegundaVezConUnPersonajeCalificadoPorElPuebloComoPrometedorLeRespondeConSuSegundaFrase stamp: 'FP 12/13/2021 20:38:14'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test09CuandoUnInfluyenteTerminaSuRepertorioDeFrasesConUnPersonajeNoCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorSiNoLoConocenSuficientesPNJs stamp: 'FP 12/13/2021 20:38:14'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test10CuandoUnInfluyenteTerminaSuRepertorioDeFrasesConUnPersonajeCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorSiLoConocenSuficientesPNJs stamp: 'FP 12/13/2021 20:38:14'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test11CuandoUnInfluyenteCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorReiniciaSuHiloDeDialogoConElPersonaje stamp: 'FP 12/13/2021 20:38:14'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test12CuandoUnInfluyenteCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorReiniciaLosHilosDeDialogosDelRestoDeLosPNJs stamp: 'FP 12/13/2021 20:38:14'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test13SiNoHuboInteraccionesLaOpinionDeUnPuebloDiceQueQueNadieConoceANingunPJ stamp: 'FP 12/13/2021 20:38:14'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test14CuandoUnPNJTerminaSuRepertorioConUnPJDesconocidoLaOpinionDelPuebloDiceQueEsConocidoPorUno stamp: 'FP 12/13/2021 20:38:14'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test15CuandoUnPNJNoTerminaSuRepertorioConUnPJDesconocidoLaOpinionDelPuebloDiceQueEsConocidoPor0 stamp: 'FP 12/13/2021 20:38:14'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test16CuandoUnPNJTerminaSuRepertorioConUnPJDesconocidoNoAfectaLaCantidadDePNJsQueConocenAUnNuevoPJ stamp: 'FP 12/13/2021 20:38:14'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test17CuandoUnPNJTerminaSuRepertorioConUnPJDesconocidoSiSigueInteractuandoNoSubeLaCantidadDePNJsQueLoConocen stamp: 'FP 12/13/2021 20:38:14'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test18UnConversadorTieneCeroEgoCuandoNoInteractuóConNingunPrometedor stamp: 'FP 12/13/2021 20:38:14'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test19UnConversadorTieneUnoDeEgoCuandoInteractuóConUnPrometedor stamp: 'FP 12/13/2021 20:38:14'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test20LaOpinionDeUnPuebloTieneCeroConfianzaConAlguienPrometedorSiNoInteractuoLoSuficienteConSusInfluyentes stamp: 'FP 12/13/2021 20:38:14'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test21UnInfluyenteAumentaLaConfianzaSobreUnPJCuandoHablaConEl stamp: 'FP 12/13/2021 20:38:14'!
+PASSED!
+
+!methodRemoval: OpinionDeUnaRegion #opinionDe: stamp: 'FP 12/13/2021 20:38:44'!
+opinionDe: unPersonajeJugador
+	^seguidores opinionDe: unPersonajeJugador !
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 20:38:49'!
+ERROR!
+!OpinionDeUnaRegion methodsFor: 'initialize' stamp: 'FP 12/13/2021 20:39:45' overrides: 50874344!
+opinionDe: unPersonajeJugador
+	^seguidores opinionDe:unPersonajeJugador 
+! !
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 20:39:47'!
+FAILURE!
+!OpinionDeUnaRegion methodsFor: 'initialize' stamp: 'FP 12/13/2021 20:39:55' prior: 50874505 overrides: 50874344!
+opinionDe: unPersonajeJugador
+	^seguidores opinionDe: unPersonajeJugador 
+! !
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 20:39:57'!
+FAILURE!
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 20:40:25' prior: 50874516 overrides: 50874344!
+opinionDe: unPersonajeJugador
+	^opiniones at: unPersonajeJugador ifAbsent: [self opinionDesconocido]
+! !
+!OpinionDeUnPueblo methodsFor: 'public' stamp: 'FP 12/13/2021 20:40:25' overrides: 50874344!
+opinionDe: unPersonajeJugador
+	^opiniones at: unPersonajeJugador ifAbsent: [self opinionDesconocido]
+! !
+
+!methodRemoval: OpinionZonas #opinionDe: stamp: 'FP 12/13/2021 20:40:25'!
+opinionDe: unPersonajeJugador
+	^opiniones at: unPersonajeJugador ifAbsent: [self opinionDesconocido]
+!
+!OpinionDeUnaRegion methodsFor: 'private' stamp: 'FP 12/13/2021 20:40:30' overrides: 50874356!
+opinionDesconocido
+	^Desconocido new! !
+!OpinionDeUnPueblo methodsFor: 'private' stamp: 'FP 12/13/2021 20:40:30' overrides: 50874356!
+opinionDesconocido
+	^Desconocido new! !
+
+!methodRemoval: OpinionZonas #opinionDesconocido stamp: 'FP 12/13/2021 20:40:30'!
+opinionDesconocido
+	^Desconocido new!
+!OpinionDeUnaRegion methodsFor: 'private' stamp: 'FP 12/13/2021 20:40:36' overrides: 50874364!
+opinionPrometedor
+	^Prometedor new! !
+!OpinionDeUnPueblo methodsFor: 'private' stamp: 'FP 12/13/2021 20:40:36' overrides: 50874364!
+opinionPrometedor
+	^Prometedor new! !
+
+!methodRemoval: OpinionZonas #opinionPrometedor stamp: 'FP 12/13/2021 20:40:36'!
+opinionPrometedor
+	^Prometedor new!
+
+OpinionZonas subclass: #OpinionDeUnPueblo
+	instanceVariableNames: 'opiniones pjsDesconocidosConocidosPorPNJs prometedoresConocidosPorPNJsInfluyentes'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+
+Object subclass: #OpinionZonas
+	instanceVariableNames: 'seguidores'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+
+!classDefinition: #OpinionZonas category: 'AlgoIII-PNJ-2021-2C-2doParcial' stamp: 'FP 12/13/2021 20:41:09'!
+Object subclass: #OpinionZonas
+	instanceVariableNames: 'seguidores'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+
+OpinionZonas subclass: #OpinionDeUnPueblo
+	instanceVariableNames: 'opiniones pjsDesconocidosConocidosPorPNJs prometedoresConocidosPorPNJsInfluyentes'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+
+!classDefinition: #OpinionDeUnPueblo category: 'AlgoIII-PNJ-2021-2C-2doParcial' stamp: 'FP 12/13/2021 20:41:11'!
+OpinionZonas subclass: #OpinionDeUnPueblo
+	instanceVariableNames: 'opiniones pjsDesconocidosConocidosPorPNJs prometedoresConocidosPorPNJsInfluyentes'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+
+!methodRemoval: OpinionDeUnaRegion #opinionPrometedor stamp: 'FP 12/13/2021 20:41:30'!
+opinionPrometedor
+	^Prometedor new!
+
+!methodRemoval: OpinionDeUnaRegion #opinionDesconocido stamp: 'FP 12/13/2021 20:41:33'!
+opinionDesconocido
+	^Desconocido new!
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 20:42:00' prior: 50874129!
+test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido
+
+	| opinionDeRegionChata opinionDeRioVerde |
+	opinionDeRioVerde := OpinionDeUnPueblo new.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDeRioVerde.
+	
+	self deny: (opinionDeRegionChata esVistoComoPrometedor: self pjHamilton).! !
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 20:42:02'!
+ERROR!
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 20:42:43' prior: 50874527!
+opinionDe: unPersonajeJugador
+	^seguidores opinionDe: unPersonajeJugador.
+! !
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 20:42:45'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 20:42:45'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 20:42:45'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 20:42:45'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 20:42:55'!
+PASSED!
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 20:43:29' prior: 50874143!
+test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido
+
+	| opinionDeRegionDelBajo opinionDeRiverwood |
+	opinionDeRiverwood := OpinionDeUnPueblo new.
+	opinionDeRiverwood verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionDelBajo := OpinionDeUnaRegion conUnSeguidor: opinionDeRiverwood.
+	
+	self assert: (opinionDeRegionDelBajo esVistoComoPrometedor: self pjHamilton).! !
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 20:43:31'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 20:43:31'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 20:43:31'!
+PASSED!
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 20:47:06'!
+test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido
+
+	| opinionDeRegionDelBajo opinionDeRiverwood opinionDePueblo1 opinionDePueblo2 opinionDeRegionValleChico |
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	
+	opinionDeRegionValleChico := OpinionDeUnaRegion conUnSeguidor: opinionDeRiverwood.
+	opinionDeRegionValleChico agregarSeguidor: opinionDePueblo2.
+	
+	self assert: (opinionDeRegionDelBajo esVistoComoPrometedor: self pjHamilton).! !
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 20:47:31' prior: 50874696!
+test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido
+
+	| opinionDePueblo1 opinionDePueblo2 opinionDeRegionValleChico |
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	
+	opinionDeRegionValleChico := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionValleChico agregarSeguidor: opinionDePueblo2.
+	
+	self deny: (opinionDeRegionValleChico esVistoComoPrometedor: self pjHamilton).! !
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 20:47:34'!
+ERROR!
+!OpinionDeUnaRegion methodsFor: 'initialize' stamp: 'FP 12/13/2021 20:48:12' prior: 50873965!
+initializeConUnSeguidor: anOpinionDeUnPueblo 
+	
+	seguidores := OrderedCollection with: anOpinionDeUnPueblo.! !
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 20:48:14'!
+ERROR!
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 20:49:18' prior: 50874638!
+opinionDe: unPersonajeJugador
+	^seguidores do: [:opinionDePueblo| opinionDePueblo opinionDe: unPersonajeJugador].
+! !
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 20:49:21'!
+ERROR!
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 20:55:07' prior: 50874753!
+opinionDe: unPersonajeJugador
+	| opiniones |
+	opiniones := Dictionary new.
+
+	^seguidores do: [:opinionDePueblo|| opinion|
+		opinion := opiniones at: (opinionDePueblo opinionDe: unPersonajeJugador) ifAbsentPut: 0.
+		opinion := opinion +1.
+	].
+! !
+
+----End fileIn of /home/facupri/Documentos/Facultad/algoritmos_programacion_III_leveroni/Smalltalk-Cuis-parcial/Packages/TerseGuide.pck.st----!
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 21:01:43' prior: 50874765!
+opinionDe: unPersonajeJugador
+	| opinionGeneral |
+
+	opinionGeneral := seguidores inject: 0 into: [:valor :opinionDePueblo |
+		(opinionDePueblo esVistoComoPrometedor: unPersonajeJugador)
+		ifTrue:[
+			valor+1
+		]
+		ifFalse:[
+			valor-1
+		]
+	].
+	(opinionGeneral <=0)
+	ifTrue:[
+		^Prometedor new
+	]
+	ifFalse:[
+		^Prometedor new
+	]! !
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 21:02:10'!
+opinionDesconocido
+	^Desconocido new! !
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 21:02:21'!
+opinionPrometedor
+	^Prometedor new! !
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 21:02:52' prior: 50877703!
+opinionDe: unPersonajeJugador
+	| opinionGeneral |
+
+	opinionGeneral := seguidores inject: 0 into: [:valor :opinionDePueblo |
+		(opinionDePueblo esVistoComoPrometedor: unPersonajeJugador)
+		ifTrue:[
+			valor+1
+		]
+		ifFalse:[
+			valor-1
+		]
+	].
+	(opinionGeneral <=0)
+	ifTrue:[
+		^self opinionDesconocido 
+	]
+	ifFalse:[
+		^self opinionPrometedor 
+	]! !
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 21:02:54'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 21:02:54'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 21:02:54'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 21:02:54'!
+PASSED!
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 21:03:29'!
+test03RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor
+
+	| opinionDePueblo1 opinionDePueblo2 opinionDeRegionValleChico |
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	
+	opinionDeRegionValleChico := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionValleChico agregarSeguidor: opinionDePueblo2.
+	
+	self deny: (opinionDeRegionValleChico esVistoComoPrometedor: self pjHamilton).! !
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 21:03:54'!
+test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor
+
+	| opinionDePueblo1 opinionDePueblo2 opinionDeRegionValleChico |
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	
+	opinionDeRegionValleChico := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionValleChico agregarSeguidor: opinionDePueblo2.
+	
+	self deny: (opinionDeRegionValleChico esVistoComoPrometedor: self pjHamilton).! !
+
+!methodRemoval: OpinionDeUnaRegionTest #test03RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 21:03:54'!
+test03RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor
+
+	| opinionDePueblo1 opinionDePueblo2 opinionDeRegionValleChico |
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	
+	opinionDeRegionValleChico := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionValleChico agregarSeguidor: opinionDePueblo2.
+	
+	self deny: (opinionDeRegionValleChico esVistoComoPrometedor: self pjHamilton).!
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 21:04:06' prior: 50877724!
+opinionDe: unPersonajeJugador
+	| opinionGeneral |
+
+	opinionGeneral := seguidores inject: 0 into: [:valor :opinionDePueblo |
+		(opinionDePueblo esVistoComoPrometedor: unPersonajeJugador)
+		ifTrue:[
+			valor+1
+		]
+		ifFalse:[
+			valor-1
+		]
+	].
+	(opinionGeneral <=0)
+	ifTrue:[
+		^self opinionDesconocido 
+	]
+! !
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 21:04:09'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 21:04:09'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 21:04:09'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 21:04:09'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 21:04:09'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 21:04:09'!
+ERROR!
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 21:04:27' prior: 50877818!
+opinionDe: unPersonajeJugador
+	| opinionGeneral |
+
+	opinionGeneral := seguidores inject: 0 into: [:valor :opinionDePueblo |
+		(opinionDePueblo esVistoComoPrometedor: unPersonajeJugador)
+		ifTrue:[
+			valor+1
+		]
+		ifFalse:[
+			valor-1
+		]
+	].
+	(opinionGeneral <= 0)
+	ifTrue:[
+		^self opinionDesconocido 
+	]
+! !
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 21:04:29'!
+PASSED!
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 21:04:34' prior: 50877859!
+opinionDe: unPersonajeJugador
+	| opinionGeneral |
+
+	opinionGeneral := seguidores inject: 0 into: [:valor :opinionDePueblo |
+		(opinionDePueblo esVistoComoPrometedor: unPersonajeJugador)
+		ifTrue:[
+			valor+1
+		]
+		ifFalse:[
+			valor-1
+		]
+	].
+	(opinionGeneral <= 0)
+	ifTrue:[
+		^self opinionDesconocido 
+	]
+	ifFalse:[
+		^self opinionPrometedor 
+	]! !
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 21:04:35'!
+PASSED!
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 21:10:16'!
+test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor
+
+	| opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionCentral opinionDeRegionDelAmplioValle |
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	opinionDePueblo3 verComoPrometedorA: self pjHamilton.
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+	opinionDePueblo4 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionDelAmplioValle agregarSeguidor: opinionDePueblo4.
+	
+	opinionDeRegionCentral := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionCentral agregarSeguidor: opinionDePueblo2.
+	
+	self deny: (opinionDeRegionCentral esVistoComoPrometedor: self pjHamilton).! !
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 21:10:29'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 21:10:29'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 21:10:29'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 21:10:29'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 21:10:29'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 21:10:29'!
+PASSED!
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 21:11:11' prior: 50877896!
+test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor
+
+	| opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionCentral opinionDeRegionDelAmplioValle |
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	opinionDePueblo3 verComoPrometedorA: self pjHamilton.
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionDelAmplioValle agregarSeguidor: opinionDePueblo4.
+	
+	opinionDeRegionCentral := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionCentral agregarSeguidor: opinionDePueblo2.
+	
+	self deny: (opinionDeRegionCentral esVistoComoPrometedor: self pjHamilton).! !
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 21:11:11'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 21:11:11'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 21:11:11'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 21:11:11'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 21:11:11'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 21:11:11'!
+PASSED!
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 21:11:27' prior: 50877961!
+test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor
+
+	| opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionCentral opinionDeRegionDelAmplioValle |
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionDelAmplioValle agregarSeguidor: opinionDePueblo4.
+	
+	opinionDeRegionCentral := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionCentral agregarSeguidor: opinionDePueblo2.
+	
+	self deny: (opinionDeRegionCentral esVistoComoPrometedor: self pjHamilton).! !
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 21:11:28'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 21:11:28'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 21:11:28'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 21:11:28'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 21:11:28'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 21:11:28'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 21:11:34'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 21:11:34'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 21:11:34'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 21:11:34'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 21:11:34'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 21:11:34'!
+PASSED!
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 21:11:38' prior: 50878025!
+test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor
+
+	| opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionCentral opinionDeRegionDelAmplioValle |
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	opinionDePueblo3 verComoPrometedorA: self pjHamilton.
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+	opinionDePueblo4 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionDelAmplioValle agregarSeguidor: opinionDePueblo4.
+	
+	opinionDeRegionCentral := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionCentral agregarSeguidor: opinionDePueblo2.
+	
+	self deny: (opinionDeRegionCentral esVistoComoPrometedor: self pjHamilton).! !
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 21:11:49'!
+test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor
+
+	| opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionCentral opinionDeRegionDelAmplioValle |
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	opinionDePueblo3 verComoPrometedorA: self pjHamilton.
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+	opinionDePueblo4 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionDelAmplioValle agregarSeguidor: opinionDePueblo4.
+	
+	opinionDeRegionCentral := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionCentral agregarSeguidor: opinionDePueblo2.
+	
+	self deny: (opinionDeRegionCentral esVistoComoPrometedor: self pjHamilton).! !
+
+!methodRemoval: OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 21:11:49'!
+test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor
+
+	| opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionCentral opinionDeRegionDelAmplioValle |
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	opinionDePueblo3 verComoPrometedorA: self pjHamilton.
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+	opinionDePueblo4 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionDelAmplioValle agregarSeguidor: opinionDePueblo4.
+	
+	opinionDeRegionCentral := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionCentral agregarSeguidor: opinionDePueblo2.
+	
+	self deny: (opinionDeRegionCentral esVistoComoPrometedor: self pjHamilton).!
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 21:12:19' prior: 50878152!
+test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor
+
+	| opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionCentral opinionDeRegionDelAmplioValle |
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	opinionDePueblo3 verComoPrometedorA: self pjHamilton.
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+	opinionDePueblo4 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionDelAmplioValle agregarSeguidor: opinionDePueblo4.
+	
+	opinionDeRegionCentral := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionCentral agregarSeguidor: opinionDePueblo2.
+	
+	self assert: (opinionDeRegionCentral esVistoComoPrometedor: self pjHamilton).! !
+
+!testRun: #OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 21:12:20'!
+FAILURE!
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 21:13:25' prior: 50877777!
+test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor
+
+	| opinionDePueblo1 opinionDePueblo2 opinionDeRegionValleChico opinionDePueblo3 |
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	opinionDePueblo2 verComoPrometedorA: self pjHamilton.
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	
+	opinionDeRegionValleChico := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionValleChico agregarSeguidor: opinionDePueblo2.
+		opinionDeRegionValleChico agregarSeguidor: opinionDePueblo3.
+	
+	self deny: (opinionDeRegionValleChico esVistoComoPrometedor: self pjHamilton).! !
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 21:13:29' prior: 50878262!
+test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor
+
+	| opinionDePueblo1 opinionDePueblo2 opinionDeRegionValleChico opinionDePueblo3 |
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	opinionDePueblo2 verComoPrometedorA: self pjHamilton.
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	
+	opinionDeRegionValleChico := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionValleChico agregarSeguidor: opinionDePueblo2.
+	opinionDeRegionValleChico agregarSeguidor: opinionDePueblo3.
+	
+	self deny: (opinionDeRegionValleChico esVistoComoPrometedor: self pjHamilton).! !
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 21:13:31'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 21:13:31'!
+FAILURE!
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 21:13:43' prior: 50878288!
+test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor
+
+	| opinionDePueblo1 opinionDePueblo2 opinionDeRegionValleChico opinionDePueblo3 |
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	opinionDePueblo2 verComoPrometedorA: self pjHamilton.
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	
+	opinionDeRegionValleChico := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionValleChico agregarSeguidor: opinionDePueblo2.
+	opinionDeRegionValleChico agregarSeguidor: opinionDePueblo3.
+	
+	self assert: (opinionDeRegionValleChico esVistoComoPrometedor: self pjHamilton).! !
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 21:13:45'!
+PASSED!
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 21:14:06' prior: 50878324!
+test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor
+
+	| opinionDePueblo1 opinionDePueblo2 opinionDeRegionValleChico opinionDePueblo3 |
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	opinionDePueblo2 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	
+	opinionDeRegionValleChico := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionValleChico agregarSeguidor: opinionDePueblo2.
+	opinionDeRegionValleChico agregarSeguidor: opinionDePueblo3.
+	
+	self assert: (opinionDeRegionValleChico esVistoComoPrometedor: self pjHamilton).! !
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 21:14:08'!
+PASSED!
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 21:14:14' prior: 50878222!
+test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor
+
+	| opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionCentral opinionDeRegionDelAmplioValle |
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	opinionDePueblo3 verComoPrometedorA: self pjHamilton.
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+	opinionDePueblo4 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionDelAmplioValle agregarSeguidor: opinionDePueblo4.
+	
+	opinionDeRegionCentral := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionCentral agregarSeguidor: opinionDePueblo2.
+	
+	self assert: (opinionDeRegionCentral esVistoComoPrometedor: self pjHamilton).! !
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 21:15:32' prior: 50878386!
+test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor
+
+	| opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionCentral opinionDeRegionDelAmplioValle |
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	opinionDePueblo3 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+	opinionDePueblo4 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionDelAmplioValle agregarSeguidor: opinionDePueblo4.
+	
+	opinionDeRegionCentral := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionCentral agregarSeguidor: opinionDePueblo2.
+	
+	self assert: (opinionDeRegionDelAmplioValle esVistoComoPrometedor: self pjHamilton).	
+	self assert: (opinionDeRegionCentral esVistoComoPrometedor: self pjHamilton).! !
+
+!testRun: #OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 21:15:36'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 21:16:09'!
+FAILURE!
+!OpinionDeUnaRegionTest methodsFor: 'as yet unclassified' stamp: 'FP 12/13/2021 21:19:28' prior: 50878420!
+test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor
+
+	| opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionCentral opinionDeRegionDelAmplioValle |
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	opinionDePueblo3 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+	opinionDePueblo4 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionDelAmplioValle agregarSeguidor: opinionDePueblo4.
+	
+	opinionDeRegionCentral := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionCentral agregarSeguidor: opinionDePueblo2.
+	opinionDeRegionCentral agregarSeguidor: opinionDeRegionDelAmplioValle.
+	
+	self assert: (opinionDeRegionDelAmplioValle esVistoComoPrometedor: self pjHamilton).	
+	self assert: (opinionDeRegionCentral esVistoComoPrometedor: self pjHamilton).! !
+
+!testRun: #OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 21:19:30'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 21:19:30'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 21:19:30'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 21:19:30'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 21:19:30'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 21:19:30'!
+PASSED!
+!OpinionDeUnaRegionTest methodsFor: 'tests - propagacion arriba hacia abajo' stamp: 'FP 12/13/2021 21:28:34'!
+test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion
+
+	| opinionDeRegionChata opinionDeRioVerde opinionDePueblo1 opinionDePueblo2 |
+	opinionDeRioVerde := OpinionDeUnPueblo new.
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	opinionDePueblo2 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDeRioVerde.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo1.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo2.
+		
+	self assert: (opinionDeRioVerde esVistoComoPrometedor: self pjHamilton).! !
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 21:28:39'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 21:34:49'!
+FAILURE!
+
+Object subclass: #OpinionZonas
+	instanceVariableNames: 'seguidores opinionReferente'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+
+!classDefinition: #OpinionZonas category: 'AlgoIII-PNJ-2021-2C-2doParcial' stamp: 'FP 12/13/2021 21:37:15'!
+Object subclass: #OpinionZonas
+	instanceVariableNames: 'seguidores opinionReferente'
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+!OpinionZonas methodsFor: 'public' stamp: 'FP 12/13/2021 21:38:00'!
+setearOpinionReferente: unaOpinionReferente
+
+	opinionReferente := unaOpinionReferente ! !
+!OpinionZonas methodsFor: 'public' stamp: 'FP 12/13/2021 21:38:01' prior: 50878589!
+setearOpinionReferente: unaOpinionReferente
+
+	opinionReferente := unaOpinionReferente.! !
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 21:38:19' overrides: 50874292!
+agregarSeguidor: unPersonajeNoJugador 
+	seguidores add: unPersonajeNoJugador.! !
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 21:39:36' prior: 50878601 overrides: 50874292!
+agregarSeguidor: unaOpinion 
+	unaOpinion setearOpinionReferente: self.
+	seguidores add: unaOpinion.! !
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 21:40:05' prior: 50877877!
+opinionDe: unPersonajeJugador
+	| opinionGeneral |
+
+	opinionGeneral := seguidores inject: 0 into: [:valor :opinionDePueblo |
+		(opinionDePueblo esVistoComoPrometedor: unPersonajeJugador)
+		ifTrue:[
+			valor+1
+		]
+		ifFalse:[
+			valor-1
+		]
+	].
+	(opinionGeneral <= 0)
+	ifTrue:[
+		^self opinionDesconocido 
+	]
+	ifFalse:[
+		^self opinionPrometedor 
+	]! !
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 21:41:53' prior: 50878614!
+opinionDe: unPersonajeJugador
+	| opinionGeneral |
+
+	opinionGeneral := seguidores inject: 0 into: [:valor :opinionDePueblo |
+		(opinionDePueblo esVistoComoPrometedor: unPersonajeJugador)
+		ifTrue:[
+			valor+1
+		]
+		ifFalse:[
+			valor-1
+		]
+	].
+	(opinionGeneral <= 0)
+	ifTrue:[
+		^self opinionDesconocido 
+	]
+	ifFalse:[
+		^self opinionPrometedor 
+	]! !
+!OpinionDeUnPueblo methodsFor: 'public' stamp: 'FP 12/13/2021 21:42:12' prior: 50874534!
+opinionDe: unPersonajeJugador
+	opinionReferente opinionDe: unPersonajeJugador.
+
+	^opiniones at: unPersonajeJugador ifAbsent: [self opinionDesconocido]
+! !
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 21:43:09'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 21:43:28'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 21:43:40'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 21:43:44'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 21:43:49'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 21:43:55'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 21:44:00'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 21:44:22'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 21:44:35'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 21:44:41'!
+ERROR!
+!OpinionDeUnaRegion methodsFor: 'initialize' stamp: 'FP 12/13/2021 21:45:38' prior: 50874741!
+initializeConUnSeguidor: anOpinionDeUnPueblo 
+	
+	seguidores := OrderedCollection new.
+	self agregarSeguidor: anOpinionDeUnPueblo.! !
+!OpinionDeUnPueblo methodsFor: 'public' stamp: 'FP 12/13/2021 21:47:24' prior: 50878642!
+opinionDe: unPersonajeJugador
+
+	^opiniones at: unPersonajeJugador ifAbsent: [self opinionDesconocido]
+! !
+!OpinionDeUnPueblo methodsFor: 'public' stamp: 'FP 12/13/2021 21:50:53'!
+opinionRealDe: unPersonajeJugador
+
+	^opiniones at: unPersonajeJugador ifAbsent: [self opinionDesconocido]
+! !
+
+#(1 2 3 4 5) count: [:e| e>3]!
+
+#( 2 3 4 5) size!
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 21:54:13' prior: 50878628!
+opinionDe: unPersonajeJugador
+	| opinionGeneral |
+
+	opinionGeneral := seguidores count:[:seguidor| 
+		seguidor esVistoComoPrometedor: unPersonajeJugador .
+	].
+	(opinionGeneral <= (seguidores size/2))
+	ifTrue:[
+		^self opinionDesconocido 
+	]
+	ifFalse:[
+		^self opinionPrometedor 
+	]! !
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 21:54:14'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 21:54:14'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 21:54:14'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 21:54:14'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 21:54:14'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 21:54:14'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 21:54:14'!
+FAILURE!
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 21:54:26' prior: 50878721!
+opinionDe: unPersonajeJugador
+	| opinionGeneral |
+
+	opinionGeneral := seguidores count:[:seguidor| 
+		seguidor esVistoComoPrometedor: unPersonajeJugador .
+	].
+	(opinionGeneral < (seguidores size/2))
+	ifTrue:[
+		^self opinionDesconocido 
+	]
+	ifFalse:[
+		^self opinionPrometedor 
+	]! !
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 21:54:26'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 21:54:26'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 21:54:26'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 21:54:26'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 21:54:26'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 21:54:26'!
+PASSED!
+
+3/2!
+
+2 < 3/2!
+
+2 < 3//2!
+
+2 < (3//2)!
+
+2 < (3/2)!
+
+2 < (#(1 2 3 4) size/2)!
+
+2 < (#(1 2 3 4 5) size/2)!
+
+2 <= (#(1 2 3 4 5) size/2)!
+
+2 <= (#(1 2 4 5) size/2)!
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 21:56:39' prior: 50878768!
+opinionDe: unPersonajeJugador
+	| opinionGeneral |
+
+	opinionGeneral := seguidores count:[:seguidor| 
+		seguidor esVistoComoPrometedor: unPersonajeJugador .
+	].
+	(opinionGeneral <= (seguidores size/2))
+	ifTrue:[
+		^self opinionDesconocido 
+	]
+	ifFalse:[
+		^self opinionPrometedor 
+	]! !
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 21:56:39'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 21:56:39'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 21:56:39'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 21:56:39'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 21:56:39'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 21:56:39'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 21:56:39'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 21:56:57'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 21:56:57'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 21:56:57'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 21:56:57'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 21:56:57'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 21:56:57'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 21:56:57'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 21:57:57'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 21:57:57'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 21:57:57'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 21:57:57'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 21:57:57'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 21:57:57'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 21:57:57'!
+FAILURE!
+
+opinionDeRioVerde esVistoComoPrometedor: self pjHamilton!
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 21:58:53'!
+opinionLocalDe: unPersonajeJugador
+	| opinionGeneral |
+
+	opinionGeneral := seguidores count:[:seguidor| 
+		seguidor esVistoComoPrometedor: unPersonajeJugador .
+	].
+	(opinionGeneral <= (seguidores size/2))
+	ifTrue:[
+		^self opinionDesconocido 
+	]
+	ifFalse:[
+		^self opinionPrometedor 
+	]! !
+!OpinionDeUnPueblo methodsFor: 'public' stamp: 'FP 12/13/2021 21:59:00'!
+opinionLocalDe: unPersonajeJugador
+
+	^opiniones at: unPersonajeJugador ifAbsent: [self opinionDesconocido]
+! !
+!OpinionDeUnPueblo methodsFor: 'public' stamp: 'FP 12/13/2021 21:59:38' prior: 50878707!
+opinionDe: unPersonajeJugador
+
+	^opiniones at: unPersonajeJugador ifAbsent: [self opinionDesconocido]
+! !
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 22:00:32' prior: 50878815!
+opinionDe: unPersonajeJugador
+	| opinionGeneral |
+
+	opinionGeneral := seguidores count:[:seguidor| 
+		seguidor opinionLocalDe: unPersonajeJugador isKindOf: [self opinionPrometedor].
+	].
+	(opinionGeneral <= (seguidores size/2))
+	ifTrue:[
+		^self opinionDesconocido 
+	]
+	ifFalse:[
+		^self opinionPrometedor 
+	]! !
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 22:00:38' prior: 50878960!
+opinionDe: unPersonajeJugador
+	| opinionGeneral |
+
+	opinionGeneral := seguidores count:[:seguidor| 
+		(seguidor opinionLocalDe: unPersonajeJugador) isKindOf: [self opinionPrometedor].
+	].
+	(opinionGeneral <= (seguidores size/2))
+	ifTrue:[
+		^self opinionDesconocido 
+	]
+	ifFalse:[
+		^self opinionPrometedor 
+	]! !
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:00:40'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:00:40'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 22:00:40'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 22:00:40'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:00:40'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 22:00:40'!
+FAILURE!
+!OpinionZonas methodsFor: 'public' stamp: 'FP 12/13/2021 22:01:11'!
+esVistoComoPrometedorLocal: unPotencialPersonajeJugadorPrometedor 
+	^ (self opinionDe: unPotencialPersonajeJugadorPrometedor) esPrometedor.! !
+!OpinionZonas methodsFor: 'public' stamp: 'FP 12/13/2021 22:01:14' prior: 50879016!
+esVistoComoPrometedorLocal: unPotencialPersonajeJugadorPrometedor 
+	^ (self opinionLocalDe: unPotencialPersonajeJugadorPrometedor) esPrometedor.! !
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 22:01:29' prior: 50878934!
+opinionLocalDe: unPersonajeJugador
+	| opinionGeneral |
+
+	opinionGeneral := seguidores count:[:seguidor| 
+		seguidor esVistoComoPrometedorLocal: unPersonajeJugador .
+	].
+	(opinionGeneral <= (seguidores size/2))
+	ifTrue:[
+		^self opinionDesconocido 
+	]
+	ifFalse:[
+		^self opinionPrometedor 
+	]! !
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:01:32'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:01:32'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 22:01:32'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 22:01:32'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:01:32'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 22:01:32'!
+FAILURE!
+
+!methodRemoval: OpinionDeUnPueblo #opinionRealDe: stamp: 'FP 12/13/2021 22:02:01'!
+opinionRealDe: unPersonajeJugador
+
+	^opiniones at: unPersonajeJugador ifAbsent: [self opinionDesconocido]
+!
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 22:02:27' prior: 50878973!
+opinionDe: unPersonajeJugador
+	| opinionGeneral |
+
+	opinionGeneral := seguidores count:[:seguidor| 
+		seguidor esVistoComoPrometedorLocal: unPersonajeJugador .
+	].
+	(opinionGeneral <= (seguidores size/2))
+	ifTrue:[
+		^self opinionDesconocido 
+	]
+	ifFalse:[
+		^self opinionPrometedor 
+	]! !
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:02:28'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:02:28'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 22:02:28'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 22:02:28'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:02:28'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 22:02:28'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:02:28'!
+FAILURE!
+!OpinionDeUnPueblo methodsFor: 'public' stamp: 'FP 12/13/2021 22:03:20' prior: 50878953!
+opinionDe: unPersonajeJugador
+	
+	| referente |
+	referente := opinionReferente opinionDe: unPersonajeJugador 
+
+	^opiniones at: unPersonajeJugador ifAbsent: [self opinionDesconocido]
+! !
+!OpinionDeUnPueblo methodsFor: 'public' stamp: 'FP 12/13/2021 22:03:28' prior: 50879129!
+opinionDe: unPersonajeJugador
+	
+	| referente |
+	referente := opinionReferente opinionDe: unPersonajeJugador .
+
+	^opiniones at: unPersonajeJugador ifAbsent: [self opinionDesconocido]
+! !
+
+!testRun: #DialogosConPNJsTest #test01CuandoElConversadorInteractuaPorPrimeraVezConUnPersonajeLeRespondeConSuPrimerFrase stamp: 'FP 12/13/2021 22:03:34'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test02CuandoElConversadorInteractuaPorSegundaVezConUnPersonajeLeRespondeConSuSegundaFrase stamp: 'FP 12/13/2021 22:03:34'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test03CuandoElConversadorOlvidaInteraccionesPreviasConUnPersonajeAlVolverAInteractuarLeRespondeConSuPrimerFrase stamp: 'FP 12/13/2021 22:03:34'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test04CuandoElConversadorInterctuaYTerminoSuRepertorioDeFrasesConUnPersonajeLeRespondeConSuUltimaFrase stamp: 'FP 12/13/2021 22:03:34'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test05ElConversadorMantieneInteraccionesEnParaleloConDiferentesPersonajes stamp: 'FP 12/13/2021 22:03:34'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test06ElConversadorMantieneInteraccionesCompletasEnParaleloConDiferentesPersonajes stamp: 'FP 12/13/2021 22:03:34'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test07CuandoElConversadorInteractuaPorPrimeraVezConUnPersonajeCalificadoPorElPuebloComoPrometedorLeRespondeConSuPrimerFrase stamp: 'FP 12/13/2021 22:03:34'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test08CuandoElConversadorInteractuaPorSegundaVezConUnPersonajeCalificadoPorElPuebloComoPrometedorLeRespondeConSuSegundaFrase stamp: 'FP 12/13/2021 22:03:34'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test09CuandoUnInfluyenteTerminaSuRepertorioDeFrasesConUnPersonajeNoCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorSiNoLoConocenSuficientesPNJs stamp: 'FP 12/13/2021 22:03:34'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test10CuandoUnInfluyenteTerminaSuRepertorioDeFrasesConUnPersonajeCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorSiLoConocenSuficientesPNJs stamp: 'FP 12/13/2021 22:03:34'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test11CuandoUnInfluyenteCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorReiniciaSuHiloDeDialogoConElPersonaje stamp: 'FP 12/13/2021 22:03:34'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test12CuandoUnInfluyenteCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorReiniciaLosHilosDeDialogosDelRestoDeLosPNJs stamp: 'FP 12/13/2021 22:03:34'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test13SiNoHuboInteraccionesLaOpinionDeUnPuebloDiceQueQueNadieConoceANingunPJ stamp: 'FP 12/13/2021 22:03:34'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test14CuandoUnPNJTerminaSuRepertorioConUnPJDesconocidoLaOpinionDelPuebloDiceQueEsConocidoPorUno stamp: 'FP 12/13/2021 22:03:34'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test15CuandoUnPNJNoTerminaSuRepertorioConUnPJDesconocidoLaOpinionDelPuebloDiceQueEsConocidoPor0 stamp: 'FP 12/13/2021 22:03:34'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test16CuandoUnPNJTerminaSuRepertorioConUnPJDesconocidoNoAfectaLaCantidadDePNJsQueConocenAUnNuevoPJ stamp: 'FP 12/13/2021 22:03:34'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test17CuandoUnPNJTerminaSuRepertorioConUnPJDesconocidoSiSigueInteractuandoNoSubeLaCantidadDePNJsQueLoConocen stamp: 'FP 12/13/2021 22:03:34'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test18UnConversadorTieneCeroEgoCuandoNoInteractuóConNingunPrometedor stamp: 'FP 12/13/2021 22:03:34'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test19UnConversadorTieneUnoDeEgoCuandoInteractuóConUnPrometedor stamp: 'FP 12/13/2021 22:03:34'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test20LaOpinionDeUnPuebloTieneCeroConfianzaConAlguienPrometedorSiNoInteractuoLoSuficienteConSusInfluyentes stamp: 'FP 12/13/2021 22:03:34'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test21UnInfluyenteAumentaLaConfianzaSobreUnPJCuandoHablaConEl stamp: 'FP 12/13/2021 22:03:34'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:03:34'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:03:34'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 22:03:34'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 22:03:34'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:03:34'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 22:03:34'!
+PASSED!
+!OpinionDeUnPueblo methodsFor: 'public' stamp: 'FP 12/13/2021 22:03:45' prior: 50879138!
+opinionDe: unPersonajeJugador
+	
+	| referente |
+	referente := opinionReferente opinionDe: unPersonajeJugador.
+
+	^opiniones at: unPersonajeJugador ifAbsent: [self opinionDesconocido]
+! !
+
+!testRun: #DialogosConPNJsTest #test01CuandoElConversadorInteractuaPorPrimeraVezConUnPersonajeLeRespondeConSuPrimerFrase stamp: 'FP 12/13/2021 22:03:50'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test02CuandoElConversadorInteractuaPorSegundaVezConUnPersonajeLeRespondeConSuSegundaFrase stamp: 'FP 12/13/2021 22:03:50'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test03CuandoElConversadorOlvidaInteraccionesPreviasConUnPersonajeAlVolverAInteractuarLeRespondeConSuPrimerFrase stamp: 'FP 12/13/2021 22:03:50'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test04CuandoElConversadorInterctuaYTerminoSuRepertorioDeFrasesConUnPersonajeLeRespondeConSuUltimaFrase stamp: 'FP 12/13/2021 22:03:50'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test05ElConversadorMantieneInteraccionesEnParaleloConDiferentesPersonajes stamp: 'FP 12/13/2021 22:03:50'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test06ElConversadorMantieneInteraccionesCompletasEnParaleloConDiferentesPersonajes stamp: 'FP 12/13/2021 22:03:50'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test07CuandoElConversadorInteractuaPorPrimeraVezConUnPersonajeCalificadoPorElPuebloComoPrometedorLeRespondeConSuPrimerFrase stamp: 'FP 12/13/2021 22:03:50'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test08CuandoElConversadorInteractuaPorSegundaVezConUnPersonajeCalificadoPorElPuebloComoPrometedorLeRespondeConSuSegundaFrase stamp: 'FP 12/13/2021 22:03:50'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test09CuandoUnInfluyenteTerminaSuRepertorioDeFrasesConUnPersonajeNoCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorSiNoLoConocenSuficientesPNJs stamp: 'FP 12/13/2021 22:03:50'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test10CuandoUnInfluyenteTerminaSuRepertorioDeFrasesConUnPersonajeCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorSiLoConocenSuficientesPNJs stamp: 'FP 12/13/2021 22:03:50'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test11CuandoUnInfluyenteCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorReiniciaSuHiloDeDialogoConElPersonaje stamp: 'FP 12/13/2021 22:03:50'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test12CuandoUnInfluyenteCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorReiniciaLosHilosDeDialogosDelRestoDeLosPNJs stamp: 'FP 12/13/2021 22:03:50'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test13SiNoHuboInteraccionesLaOpinionDeUnPuebloDiceQueQueNadieConoceANingunPJ stamp: 'FP 12/13/2021 22:03:50'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test14CuandoUnPNJTerminaSuRepertorioConUnPJDesconocidoLaOpinionDelPuebloDiceQueEsConocidoPorUno stamp: 'FP 12/13/2021 22:03:50'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test15CuandoUnPNJNoTerminaSuRepertorioConUnPJDesconocidoLaOpinionDelPuebloDiceQueEsConocidoPor0 stamp: 'FP 12/13/2021 22:03:50'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test16CuandoUnPNJTerminaSuRepertorioConUnPJDesconocidoNoAfectaLaCantidadDePNJsQueConocenAUnNuevoPJ stamp: 'FP 12/13/2021 22:03:50'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test17CuandoUnPNJTerminaSuRepertorioConUnPJDesconocidoSiSigueInteractuandoNoSubeLaCantidadDePNJsQueLoConocen stamp: 'FP 12/13/2021 22:03:50'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test18UnConversadorTieneCeroEgoCuandoNoInteractuóConNingunPrometedor stamp: 'FP 12/13/2021 22:03:50'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test19UnConversadorTieneUnoDeEgoCuandoInteractuóConUnPrometedor stamp: 'FP 12/13/2021 22:03:50'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test20LaOpinionDeUnPuebloTieneCeroConfianzaConAlguienPrometedorSiNoInteractuoLoSuficienteConSusInfluyentes stamp: 'FP 12/13/2021 22:03:50'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test21UnInfluyenteAumentaLaConfianzaSobreUnPJCuandoHablaConEl stamp: 'FP 12/13/2021 22:03:50'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:03:50'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:03:50'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 22:03:50'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 22:03:50'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:03:50'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 22:03:50'!
+PASSED!
+!OpinionDeUnPueblo methodsFor: 'public' stamp: 'FP 12/13/2021 22:03:56' prior: 50879291!
+opinionDe: unPersonajeJugador
+	
+
+
+	^opiniones at: unPersonajeJugador ifAbsent: [self opinionDesconocido]
+! !
+
+!testRun: #DialogosConPNJsTest #test01CuandoElConversadorInteractuaPorPrimeraVezConUnPersonajeLeRespondeConSuPrimerFrase stamp: 'FP 12/13/2021 22:03:58'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test02CuandoElConversadorInteractuaPorSegundaVezConUnPersonajeLeRespondeConSuSegundaFrase stamp: 'FP 12/13/2021 22:03:58'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test03CuandoElConversadorOlvidaInteraccionesPreviasConUnPersonajeAlVolverAInteractuarLeRespondeConSuPrimerFrase stamp: 'FP 12/13/2021 22:03:58'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test04CuandoElConversadorInterctuaYTerminoSuRepertorioDeFrasesConUnPersonajeLeRespondeConSuUltimaFrase stamp: 'FP 12/13/2021 22:03:58'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test05ElConversadorMantieneInteraccionesEnParaleloConDiferentesPersonajes stamp: 'FP 12/13/2021 22:03:58'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test06ElConversadorMantieneInteraccionesCompletasEnParaleloConDiferentesPersonajes stamp: 'FP 12/13/2021 22:03:58'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test07CuandoElConversadorInteractuaPorPrimeraVezConUnPersonajeCalificadoPorElPuebloComoPrometedorLeRespondeConSuPrimerFrase stamp: 'FP 12/13/2021 22:03:58'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test08CuandoElConversadorInteractuaPorSegundaVezConUnPersonajeCalificadoPorElPuebloComoPrometedorLeRespondeConSuSegundaFrase stamp: 'FP 12/13/2021 22:03:58'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test09CuandoUnInfluyenteTerminaSuRepertorioDeFrasesConUnPersonajeNoCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorSiNoLoConocenSuficientesPNJs stamp: 'FP 12/13/2021 22:03:58'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test10CuandoUnInfluyenteTerminaSuRepertorioDeFrasesConUnPersonajeCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorSiLoConocenSuficientesPNJs stamp: 'FP 12/13/2021 22:03:58'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test11CuandoUnInfluyenteCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorReiniciaSuHiloDeDialogoConElPersonaje stamp: 'FP 12/13/2021 22:03:58'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test12CuandoUnInfluyenteCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorReiniciaLosHilosDeDialogosDelRestoDeLosPNJs stamp: 'FP 12/13/2021 22:03:58'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test13SiNoHuboInteraccionesLaOpinionDeUnPuebloDiceQueQueNadieConoceANingunPJ stamp: 'FP 12/13/2021 22:03:58'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test14CuandoUnPNJTerminaSuRepertorioConUnPJDesconocidoLaOpinionDelPuebloDiceQueEsConocidoPorUno stamp: 'FP 12/13/2021 22:03:58'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test15CuandoUnPNJNoTerminaSuRepertorioConUnPJDesconocidoLaOpinionDelPuebloDiceQueEsConocidoPor0 stamp: 'FP 12/13/2021 22:03:58'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test16CuandoUnPNJTerminaSuRepertorioConUnPJDesconocidoNoAfectaLaCantidadDePNJsQueConocenAUnNuevoPJ stamp: 'FP 12/13/2021 22:03:58'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test17CuandoUnPNJTerminaSuRepertorioConUnPJDesconocidoSiSigueInteractuandoNoSubeLaCantidadDePNJsQueLoConocen stamp: 'FP 12/13/2021 22:03:58'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test18UnConversadorTieneCeroEgoCuandoNoInteractuóConNingunPrometedor stamp: 'FP 12/13/2021 22:03:58'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test19UnConversadorTieneUnoDeEgoCuandoInteractuóConUnPrometedor stamp: 'FP 12/13/2021 22:03:58'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test20LaOpinionDeUnPuebloTieneCeroConfianzaConAlguienPrometedorSiNoInteractuoLoSuficienteConSusInfluyentes stamp: 'FP 12/13/2021 22:03:58'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test21UnInfluyenteAumentaLaConfianzaSobreUnPJCuandoHablaConEl stamp: 'FP 12/13/2021 22:03:58'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:03:58'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:03:58'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 22:03:58'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 22:03:58'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:03:58'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 22:03:58'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:03:58'!
+FAILURE!
+!OpinionDeUnPueblo methodsFor: 'public' stamp: 'FP 12/13/2021 22:04:13' prior: 50879444!
+opinionDe: unPersonajeJugador
+	
+	| referente |
+	referente := opinionReferente opinionDe: unPersonajeJugador.
+
+	^opiniones at: unPersonajeJugador ifAbsent: [self opinionDesconocido]
+! !
+
+!testRun: #DialogosConPNJsTest #test01CuandoElConversadorInteractuaPorPrimeraVezConUnPersonajeLeRespondeConSuPrimerFrase stamp: 'FP 12/13/2021 22:04:18'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test02CuandoElConversadorInteractuaPorSegundaVezConUnPersonajeLeRespondeConSuSegundaFrase stamp: 'FP 12/13/2021 22:04:18'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test03CuandoElConversadorOlvidaInteraccionesPreviasConUnPersonajeAlVolverAInteractuarLeRespondeConSuPrimerFrase stamp: 'FP 12/13/2021 22:04:18'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test04CuandoElConversadorInterctuaYTerminoSuRepertorioDeFrasesConUnPersonajeLeRespondeConSuUltimaFrase stamp: 'FP 12/13/2021 22:04:18'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test05ElConversadorMantieneInteraccionesEnParaleloConDiferentesPersonajes stamp: 'FP 12/13/2021 22:04:18'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test06ElConversadorMantieneInteraccionesCompletasEnParaleloConDiferentesPersonajes stamp: 'FP 12/13/2021 22:04:18'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test07CuandoElConversadorInteractuaPorPrimeraVezConUnPersonajeCalificadoPorElPuebloComoPrometedorLeRespondeConSuPrimerFrase stamp: 'FP 12/13/2021 22:04:18'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test08CuandoElConversadorInteractuaPorSegundaVezConUnPersonajeCalificadoPorElPuebloComoPrometedorLeRespondeConSuSegundaFrase stamp: 'FP 12/13/2021 22:04:18'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test09CuandoUnInfluyenteTerminaSuRepertorioDeFrasesConUnPersonajeNoCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorSiNoLoConocenSuficientesPNJs stamp: 'FP 12/13/2021 22:04:18'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test10CuandoUnInfluyenteTerminaSuRepertorioDeFrasesConUnPersonajeCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorSiLoConocenSuficientesPNJs stamp: 'FP 12/13/2021 22:04:18'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test11CuandoUnInfluyenteCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorReiniciaSuHiloDeDialogoConElPersonaje stamp: 'FP 12/13/2021 22:04:18'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test12CuandoUnInfluyenteCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorReiniciaLosHilosDeDialogosDelRestoDeLosPNJs stamp: 'FP 12/13/2021 22:04:18'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test13SiNoHuboInteraccionesLaOpinionDeUnPuebloDiceQueQueNadieConoceANingunPJ stamp: 'FP 12/13/2021 22:04:18'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test14CuandoUnPNJTerminaSuRepertorioConUnPJDesconocidoLaOpinionDelPuebloDiceQueEsConocidoPorUno stamp: 'FP 12/13/2021 22:04:18'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test15CuandoUnPNJNoTerminaSuRepertorioConUnPJDesconocidoLaOpinionDelPuebloDiceQueEsConocidoPor0 stamp: 'FP 12/13/2021 22:04:18'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test16CuandoUnPNJTerminaSuRepertorioConUnPJDesconocidoNoAfectaLaCantidadDePNJsQueConocenAUnNuevoPJ stamp: 'FP 12/13/2021 22:04:18'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test17CuandoUnPNJTerminaSuRepertorioConUnPJDesconocidoSiSigueInteractuandoNoSubeLaCantidadDePNJsQueLoConocen stamp: 'FP 12/13/2021 22:04:18'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test18UnConversadorTieneCeroEgoCuandoNoInteractuóConNingunPrometedor stamp: 'FP 12/13/2021 22:04:18'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test19UnConversadorTieneUnoDeEgoCuandoInteractuóConUnPrometedor stamp: 'FP 12/13/2021 22:04:18'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test20LaOpinionDeUnPuebloTieneCeroConfianzaConAlguienPrometedorSiNoInteractuoLoSuficienteConSusInfluyentes stamp: 'FP 12/13/2021 22:04:18'!
+ERROR!
+
+!testRun: #DialogosConPNJsTest #test21UnInfluyenteAumentaLaConfianzaSobreUnPJCuandoHablaConEl stamp: 'FP 12/13/2021 22:04:18'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:04:18'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:04:18'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 22:04:18'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 22:04:18'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:04:18'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 22:04:18'!
+PASSED!
+!OpinionDeUnPueblo methodsFor: 'public' stamp: 'FP 12/13/2021 22:04:25' prior: 50879600!
+opinionDe: unPersonajeJugador
+
+	^opiniones at: unPersonajeJugador ifAbsent: [self opinionDesconocido]
+! !
+
+!testRun: #DialogosConPNJsTest #test01CuandoElConversadorInteractuaPorPrimeraVezConUnPersonajeLeRespondeConSuPrimerFrase stamp: 'FP 12/13/2021 22:04:27'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test02CuandoElConversadorInteractuaPorSegundaVezConUnPersonajeLeRespondeConSuSegundaFrase stamp: 'FP 12/13/2021 22:04:27'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test03CuandoElConversadorOlvidaInteraccionesPreviasConUnPersonajeAlVolverAInteractuarLeRespondeConSuPrimerFrase stamp: 'FP 12/13/2021 22:04:27'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test04CuandoElConversadorInterctuaYTerminoSuRepertorioDeFrasesConUnPersonajeLeRespondeConSuUltimaFrase stamp: 'FP 12/13/2021 22:04:27'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test05ElConversadorMantieneInteraccionesEnParaleloConDiferentesPersonajes stamp: 'FP 12/13/2021 22:04:27'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test06ElConversadorMantieneInteraccionesCompletasEnParaleloConDiferentesPersonajes stamp: 'FP 12/13/2021 22:04:27'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test07CuandoElConversadorInteractuaPorPrimeraVezConUnPersonajeCalificadoPorElPuebloComoPrometedorLeRespondeConSuPrimerFrase stamp: 'FP 12/13/2021 22:04:27'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test08CuandoElConversadorInteractuaPorSegundaVezConUnPersonajeCalificadoPorElPuebloComoPrometedorLeRespondeConSuSegundaFrase stamp: 'FP 12/13/2021 22:04:27'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test09CuandoUnInfluyenteTerminaSuRepertorioDeFrasesConUnPersonajeNoCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorSiNoLoConocenSuficientesPNJs stamp: 'FP 12/13/2021 22:04:27'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test10CuandoUnInfluyenteTerminaSuRepertorioDeFrasesConUnPersonajeCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorSiLoConocenSuficientesPNJs stamp: 'FP 12/13/2021 22:04:27'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test11CuandoUnInfluyenteCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorReiniciaSuHiloDeDialogoConElPersonaje stamp: 'FP 12/13/2021 22:04:27'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test12CuandoUnInfluyenteCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorReiniciaLosHilosDeDialogosDelRestoDeLosPNJs stamp: 'FP 12/13/2021 22:04:27'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test13SiNoHuboInteraccionesLaOpinionDeUnPuebloDiceQueQueNadieConoceANingunPJ stamp: 'FP 12/13/2021 22:04:27'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test14CuandoUnPNJTerminaSuRepertorioConUnPJDesconocidoLaOpinionDelPuebloDiceQueEsConocidoPorUno stamp: 'FP 12/13/2021 22:04:27'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test15CuandoUnPNJNoTerminaSuRepertorioConUnPJDesconocidoLaOpinionDelPuebloDiceQueEsConocidoPor0 stamp: 'FP 12/13/2021 22:04:27'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test16CuandoUnPNJTerminaSuRepertorioConUnPJDesconocidoNoAfectaLaCantidadDePNJsQueConocenAUnNuevoPJ stamp: 'FP 12/13/2021 22:04:27'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test17CuandoUnPNJTerminaSuRepertorioConUnPJDesconocidoSiSigueInteractuandoNoSubeLaCantidadDePNJsQueLoConocen stamp: 'FP 12/13/2021 22:04:27'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test18UnConversadorTieneCeroEgoCuandoNoInteractuóConNingunPrometedor stamp: 'FP 12/13/2021 22:04:27'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test19UnConversadorTieneUnoDeEgoCuandoInteractuóConUnPrometedor stamp: 'FP 12/13/2021 22:04:27'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test20LaOpinionDeUnPuebloTieneCeroConfianzaConAlguienPrometedorSiNoInteractuoLoSuficienteConSusInfluyentes stamp: 'FP 12/13/2021 22:04:27'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test21UnInfluyenteAumentaLaConfianzaSobreUnPJCuandoHablaConEl stamp: 'FP 12/13/2021 22:04:27'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:04:27'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:04:27'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 22:04:27'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 22:04:27'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:04:27'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 22:04:27'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:04:27'!
+FAILURE!
+
+opinionReferente opinionDe: unPersonajeJugador.!
+!OpinionDeUnPueblo methodsFor: 'public' stamp: 'FP 12/13/2021 22:07:18' prior: 50879753!
+opinionDe: unPersonajeJugador
+
+	opinionReferente ifNotNil: [
+		(opinionReferente esVistoComoPrometedor: unPersonajeJugador )  	ifTrue:[
+			^opinionReferente opinionDe: unPersonajeJugador .
+		]
+	].
+
+	^opiniones at: unPersonajeJugador ifAbsent: [self opinionDesconocido]
+! !
+
+!testRun: #DialogosConPNJsTest #test01CuandoElConversadorInteractuaPorPrimeraVezConUnPersonajeLeRespondeConSuPrimerFrase stamp: 'FP 12/13/2021 22:07:21'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test02CuandoElConversadorInteractuaPorSegundaVezConUnPersonajeLeRespondeConSuSegundaFrase stamp: 'FP 12/13/2021 22:07:21'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test03CuandoElConversadorOlvidaInteraccionesPreviasConUnPersonajeAlVolverAInteractuarLeRespondeConSuPrimerFrase stamp: 'FP 12/13/2021 22:07:21'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test04CuandoElConversadorInterctuaYTerminoSuRepertorioDeFrasesConUnPersonajeLeRespondeConSuUltimaFrase stamp: 'FP 12/13/2021 22:07:21'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test05ElConversadorMantieneInteraccionesEnParaleloConDiferentesPersonajes stamp: 'FP 12/13/2021 22:07:21'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test06ElConversadorMantieneInteraccionesCompletasEnParaleloConDiferentesPersonajes stamp: 'FP 12/13/2021 22:07:21'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test07CuandoElConversadorInteractuaPorPrimeraVezConUnPersonajeCalificadoPorElPuebloComoPrometedorLeRespondeConSuPrimerFrase stamp: 'FP 12/13/2021 22:07:21'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test08CuandoElConversadorInteractuaPorSegundaVezConUnPersonajeCalificadoPorElPuebloComoPrometedorLeRespondeConSuSegundaFrase stamp: 'FP 12/13/2021 22:07:21'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test09CuandoUnInfluyenteTerminaSuRepertorioDeFrasesConUnPersonajeNoCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorSiNoLoConocenSuficientesPNJs stamp: 'FP 12/13/2021 22:07:21'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test10CuandoUnInfluyenteTerminaSuRepertorioDeFrasesConUnPersonajeCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorSiLoConocenSuficientesPNJs stamp: 'FP 12/13/2021 22:07:21'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test11CuandoUnInfluyenteCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorReiniciaSuHiloDeDialogoConElPersonaje stamp: 'FP 12/13/2021 22:07:21'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test12CuandoUnInfluyenteCambiaLaOpinionDelPuebloSobreElPersonajeAPrometedorReiniciaLosHilosDeDialogosDelRestoDeLosPNJs stamp: 'FP 12/13/2021 22:07:21'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test13SiNoHuboInteraccionesLaOpinionDeUnPuebloDiceQueQueNadieConoceANingunPJ stamp: 'FP 12/13/2021 22:07:21'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test14CuandoUnPNJTerminaSuRepertorioConUnPJDesconocidoLaOpinionDelPuebloDiceQueEsConocidoPorUno stamp: 'FP 12/13/2021 22:07:21'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test15CuandoUnPNJNoTerminaSuRepertorioConUnPJDesconocidoLaOpinionDelPuebloDiceQueEsConocidoPor0 stamp: 'FP 12/13/2021 22:07:21'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test16CuandoUnPNJTerminaSuRepertorioConUnPJDesconocidoNoAfectaLaCantidadDePNJsQueConocenAUnNuevoPJ stamp: 'FP 12/13/2021 22:07:21'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test17CuandoUnPNJTerminaSuRepertorioConUnPJDesconocidoSiSigueInteractuandoNoSubeLaCantidadDePNJsQueLoConocen stamp: 'FP 12/13/2021 22:07:21'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test18UnConversadorTieneCeroEgoCuandoNoInteractuóConNingunPrometedor stamp: 'FP 12/13/2021 22:07:21'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test19UnConversadorTieneUnoDeEgoCuandoInteractuóConUnPrometedor stamp: 'FP 12/13/2021 22:07:21'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test20LaOpinionDeUnPuebloTieneCeroConfianzaConAlguienPrometedorSiNoInteractuoLoSuficienteConSusInfluyentes stamp: 'FP 12/13/2021 22:07:21'!
+PASSED!
+
+!testRun: #DialogosConPNJsTest #test21UnInfluyenteAumentaLaConfianzaSobreUnPJCuandoHablaConEl stamp: 'FP 12/13/2021 22:07:21'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:07:21'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:07:21'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 22:07:21'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 22:07:21'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:07:21'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 22:07:21'!
+PASSED!
+!OpinionDeUnaRegionTest methodsFor: 'tests - propagacion abajo hacia arriba' stamp: 'FP 12/13/2021 22:07:35'!
+test06RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor
+
+	| opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionCentral opinionDeRegionDelAmplioValle |
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	opinionDePueblo3 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+	opinionDePueblo4 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionDelAmplioValle agregarSeguidor: opinionDePueblo4.
+	
+	opinionDeRegionCentral := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionCentral agregarSeguidor: opinionDePueblo2.
+	opinionDeRegionCentral agregarSeguidor: opinionDeRegionDelAmplioValle.
+	
+	self assert: (opinionDeRegionDelAmplioValle esVistoComoPrometedor: self pjHamilton).	
+	self assert: (opinionDeRegionCentral esVistoComoPrometedor: self pjHamilton).! !
+
+!methodRemoval: OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 22:07:36'!
+test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor
+
+	| opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionCentral opinionDeRegionDelAmplioValle |
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	opinionDePueblo3 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+	opinionDePueblo4 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionDelAmplioValle agregarSeguidor: opinionDePueblo4.
+	
+	opinionDeRegionCentral := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionCentral agregarSeguidor: opinionDePueblo2.
+	opinionDeRegionCentral agregarSeguidor: opinionDeRegionDelAmplioValle.
+	
+	self assert: (opinionDeRegionDelAmplioValle esVistoComoPrometedor: self pjHamilton).	
+	self assert: (opinionDeRegionCentral esVistoComoPrometedor: self pjHamilton).!
+!OpinionDeUnaRegionTest methodsFor: 'tests - propagacion arriba hacia abajo' stamp: 'FP 12/13/2021 22:07:57'!
+test06OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion
+
+	| opinionDeRegionChata opinionDeRioVerde opinionDePueblo1 opinionDePueblo2 |
+	opinionDeRioVerde := OpinionDeUnPueblo new.
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	opinionDePueblo2 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDeRioVerde.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo1.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo2.
+		
+	self assert: (opinionDeRioVerde esVistoComoPrometedor: self pjHamilton).! !
+
+!methodRemoval: OpinionDeUnaRegionTest #test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:07:57'!
+test05OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion
+
+	| opinionDeRegionChata opinionDeRioVerde opinionDePueblo1 opinionDePueblo2 |
+	opinionDeRioVerde := OpinionDeUnPueblo new.
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	opinionDePueblo2 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDeRioVerde.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo1.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo2.
+		
+	self assert: (opinionDeRioVerde esVistoComoPrometedor: self pjHamilton).!
+
+!testRun: #OpinionDeUnaRegionTest #test06OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:08:00'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:08:00'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:08:00'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 22:08:00'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 22:08:00'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test06OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:08:00'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test06RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 22:08:00'!
+PASSED!
+!OpinionDeUnaRegionTest methodsFor: 'tests - propagacion abajo hacia arriba' stamp: 'FP 12/13/2021 22:08:10'!
+test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor
+
+	| opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionCentral opinionDeRegionDelAmplioValle |
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	opinionDePueblo3 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+	opinionDePueblo4 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionDelAmplioValle agregarSeguidor: opinionDePueblo4.
+	
+	opinionDeRegionCentral := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionCentral agregarSeguidor: opinionDePueblo2.
+	opinionDeRegionCentral agregarSeguidor: opinionDeRegionDelAmplioValle.
+	
+	self assert: (opinionDeRegionDelAmplioValle esVistoComoPrometedor: self pjHamilton).	
+	self assert: (opinionDeRegionCentral esVistoComoPrometedor: self pjHamilton).! !
+
+!methodRemoval: OpinionDeUnaRegionTest #test06RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 22:08:10'!
+test06RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor
+
+	| opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionCentral opinionDeRegionDelAmplioValle |
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	opinionDePueblo3 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+	opinionDePueblo4 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionDelAmplioValle agregarSeguidor: opinionDePueblo4.
+	
+	opinionDeRegionCentral := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionCentral agregarSeguidor: opinionDePueblo2.
+	opinionDeRegionCentral agregarSeguidor: opinionDeRegionDelAmplioValle.
+	
+	self assert: (opinionDeRegionDelAmplioValle esVistoComoPrometedor: self pjHamilton).	
+	self assert: (opinionDeRegionCentral esVistoComoPrometedor: self pjHamilton).!
+!OpinionDeUnaRegionTest methodsFor: 'tests - propagacion arriba hacia abajo' stamp: 'FP 12/13/2021 22:09:24'!
+test06OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion
+
+	| opinionDeRegionChata opinionDeRioVerde opinionDePueblo1 opinionDePueblo2 |
+	opinionDeRioVerde := OpinionDeUnPueblo new.
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	opinionDePueblo2 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDeRioVerde.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo1.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo2.
+		
+	self assert: (opinionDeRioVerde esVistoComoPrometedor: self pjHamilton).! !
+!OpinionDeUnaRegionTest methodsFor: 'tests - propagacion arriba hacia abajo' stamp: 'FP 12/13/2021 22:11:01' prior: 50880317!
+test06OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion
+
+	| opinionDeRegionChata opinionDeRioVerde opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionDelAmplioValle |
+	opinionDeRioVerde := OpinionDeUnPueblo new.
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	opinionDePueblo2 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDeRioVerde.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo1.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo2.
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo4.
+		
+	self assert: (opinionDeRioVerde esVistoComoPrometedor: self pjHamilton).! !
+!OpinionDeUnaRegionTest methodsFor: 'tests - propagacion arriba hacia abajo' stamp: 'FP 12/13/2021 22:11:44' prior: 50880343!
+test06OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion
+
+	| opinionDeRegionChata opinionDeRioVerde opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionDelAmplioValle |
+	opinionDeRioVerde := OpinionDeUnPueblo new.
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	opinionDePueblo2 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDeRioVerde.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo1.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo2.
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo4.
+		
+	self assert: (opinionDeRegionDelAmplioValle esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo3 esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo4 esVistoComoPrometedor: self pjHamilton).! !
+
+!testRun: #OpinionDeUnaRegionTest #test06OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:11:51'!
+FAILURE!
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 22:12:44' prior: 50879081!
+opinionDe: unPersonajeJugador
+	| opinionGeneral |
+	
+	opinionReferente ifNotNil: [
+		(opinionReferente esVistoComoPrometedor: unPersonajeJugador )  	ifTrue:[
+			^opinionReferente opinionDe: unPersonajeJugador .
+		]
+	].
+
+	opinionGeneral := seguidores count:[:seguidor| 
+		seguidor esVistoComoPrometedorLocal: unPersonajeJugador .
+	].
+	(opinionGeneral <= (seguidores size/2))
+	ifTrue:[
+		^self opinionDesconocido 
+	]
+	ifFalse:[
+		^self opinionPrometedor 
+	]! !
+!OpinionDeUnaRegionTest methodsFor: 'tests - propagacion arriba hacia abajo' stamp: 'FP 12/13/2021 22:13:00' prior: 50880378!
+test06OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion
+
+	| opinionDeRegionChata opinionDeRioVerde opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionDelAmplioValle |
+	opinionDeRioVerde := OpinionDeUnPueblo new.
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	opinionDePueblo2 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDeRioVerde.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo1.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo2.
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo4.
+	
+	opinionDeRegionChata agregarSeguidor: opinionDeRegionDelAmplioValle.
+		
+	self assert: (opinionDeRegionDelAmplioValle esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo3 esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo4 esVistoComoPrometedor: self pjHamilton).! !
+
+!testRun: #OpinionDeUnaRegionTest #test06OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:13:01'!
+FAILURE!
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 22:13:26' prior: 50880422!
+opinionDe: unPersonajeJugador
+	| opinionGeneral |
+	
+	opinionReferente ifNotNil: [
+		(opinionReferente esVistoComoPrometedor: unPersonajeJugador )  	ifTrue:[
+			^opinionReferente opinionDe: unPersonajeJugador.
+		]
+	].
+
+	opinionGeneral := seguidores count:[:seguidor| 
+		seguidor esVistoComoPrometedorLocal: unPersonajeJugador.
+	].
+	(opinionGeneral <= (seguidores size/2))
+	ifTrue:[
+		^self opinionDesconocido 
+	]
+	ifFalse:[
+		^self opinionPrometedor 
+	]! !
+
+!testRun: #OpinionDeUnaRegionTest #test06OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:13:40'!
+FAILURE!
+
+opinionReferente esVistoComoPrometedor: #Hamilton!
+!OpinionDeUnaRegionTest methodsFor: 'tests - propagacion arriba hacia abajo' stamp: 'FP 12/13/2021 22:15:33' prior: 50880441!
+test06OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion
+
+	| opinionDeRegionChata opinionDeRioVerde opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionDelAmplioValle |
+	opinionDeRioVerde := OpinionDeUnPueblo new.
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	opinionDePueblo2 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDeRioVerde.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo1.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo2.
+	
+	self assert: (opinionDeRegionChata esVistoComoPrometedor: self pjHamilton).
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo4.
+	
+	opinionDeRegionChata agregarSeguidor: opinionDeRegionDelAmplioValle.
+		
+	self assert: (opinionDeRegionDelAmplioValle esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo3 esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo4 esVistoComoPrometedor: self pjHamilton).! !
+
+!testRun: #OpinionDeUnaRegionTest #test06OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:15:34'!
+FAILURE!
+
+seguidores size/2!
+
+2 <= (seguidores size/2)!
+
+2 <= (seguidores size//2) !
+
+2 <= (seguidores size/2) !
+!OpinionDeUnaRegionTest methodsFor: 'tests - propagacion arriba hacia abajo' stamp: 'FP 12/13/2021 22:19:59' prior: 50880513!
+test06OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion
+
+	| opinionDeRegionChata opinionDeRioVerde opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionDelAmplioValle |
+	opinionDeRioVerde := OpinionDeUnPueblo new.
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	opinionDePueblo2 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDeRioVerde.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo1.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo2.
+	
+	self assert: (opinionDeRegionChata esVistoComoPrometedor: self pjHamilton).
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionDelAmplioValle agregarSeguidor: opinionDePueblo4.
+	
+	opinionDeRegionChata agregarSeguidor: opinionDeRegionDelAmplioValle.
+		
+	self assert: (opinionDeRegionDelAmplioValle esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo3 esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo4 esVistoComoPrometedor: self pjHamilton).! !
+
+!testRun: #OpinionDeUnaRegionTest #test06OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:20:00'!
+FAILURE!
+
+!testRun: #OpinionDeUnaRegionTest #test06OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:20:24'!
+FAILURE!
+!OpinionDeUnaRegionTest methodsFor: 'tests - propagacion arriba hacia abajo' stamp: 'FP 12/13/2021 22:20:57' prior: 50880566!
+test06OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion
+
+	| opinionDeRegionChata opinionDeRioVerde opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionDelAmplioValle |
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	opinionDePueblo2 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDeRioVerde.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo1.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo2.
+	
+	self assert: (opinionDeRegionChata esVistoComoPrometedor: self pjHamilton).
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionDelAmplioValle agregarSeguidor: opinionDePueblo4.
+	
+	opinionDeRegionChata agregarSeguidor: opinionDeRegionDelAmplioValle.
+		
+	self assert: (opinionDeRegionDelAmplioValle esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo3 esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo4 esVistoComoPrometedor: self pjHamilton).! !
+
+!testRun: #OpinionDeUnaRegionTest #test06OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:21:08'!
+ERROR!
+!OpinionDeUnaRegionTest methodsFor: 'tests - propagacion arriba hacia abajo' stamp: 'FP 12/13/2021 22:21:25' prior: 50880622!
+test06OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion
+
+	| opinionDeRegionChata opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionDelAmplioValle |
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	opinionDePueblo2 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo2.
+	
+	self assert: (opinionDeRegionChata esVistoComoPrometedor: self pjHamilton).
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionDelAmplioValle agregarSeguidor: opinionDePueblo4.
+	
+	opinionDeRegionChata agregarSeguidor: opinionDeRegionDelAmplioValle.
+		
+	self assert: (opinionDeRegionDelAmplioValle esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo3 esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo4 esVistoComoPrometedor: self pjHamilton).! !
+
+!testRun: #OpinionDeUnaRegionTest #test06OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:21:31'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:21:31'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:21:31'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 22:21:31'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 22:21:31'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 22:21:31'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test06OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:21:31'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test06OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:21:31'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:21:39'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:21:39'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 22:21:39'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 22:21:39'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 22:21:39'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test06OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:21:39'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test06OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:21:39'!
+PASSED!
+!OpinionDeUnaRegionTest methodsFor: 'tests - propagacion arriba hacia abajo' stamp: 'FP 12/13/2021 22:24:21'!
+test07OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion
+
+	| opinionDeRegionChata opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionDelAmplioValle |
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	opinionDePueblo2 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo2.
+	
+	self assert: (opinionDeRegionChata esVistoComoPrometedor: self pjHamilton).
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionDelAmplioValle agregarSeguidor: opinionDePueblo4.
+	
+	opinionDeRegionChata agregarSeguidor: opinionDeRegionDelAmplioValle.
+		
+	self assert: (opinionDeRegionDelAmplioValle esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo3 esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo4 esVistoComoPrometedor: self pjHamilton).! !
+
+!methodRemoval: OpinionDeUnaRegionTest #test06OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:24:22'!
+test06OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion
+
+	| opinionDeRegionChata opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionDelAmplioValle |
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	opinionDePueblo2 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo2.
+	
+	self assert: (opinionDeRegionChata esVistoComoPrometedor: self pjHamilton).
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionDelAmplioValle agregarSeguidor: opinionDePueblo4.
+	
+	opinionDeRegionChata agregarSeguidor: opinionDeRegionDelAmplioValle.
+		
+	self assert: (opinionDeRegionDelAmplioValle esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo3 esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo4 esVistoComoPrometedor: self pjHamilton).!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:27:10'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:27:10'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 22:27:10'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 22:27:10'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 22:27:10'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test06OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:27:10'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test07OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:27:10'!
+PASSED!
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 22:33:46' prior: 50879032!
+opinionLocalDe: unPersonajeJugador
+	| opinionGeneral |
+
+	opinionGeneral := seguidores count: [:seguidor| 
+		seguidor esVistoComoPrometedorLocal: unPersonajeJugador .
+	].
+	(opinionGeneral <= (seguidores size/2))
+	ifTrue:[
+		^self opinionDesconocido 
+	]
+	ifFalse:[
+		^self opinionPrometedor 
+	]! !
+!OpinionDeUnaRegionTest methodsFor: 'tests' stamp: 'FP 12/13/2021 22:39:56'!
+test08OpinionDeUnaRegioTieneQueTenerAlMenosUnSeguidor
+
+	| opinionDeRegion  |
+	opinionDeRegion := OpinionDeUnaRegion new.
+	
+	self
+		should:[opinionDeRegion opinionDe: self pjHamilton ]
+		raise: Error - MessageNotUnderstood 
+   	 	withExceptionDo: [ :anError | 
+		self assert: OpinionDeUnaRegion noSePuedeOpinarSinSeguidores equals: anError messageText.
+		].
+! !
+
+!testRun: #OpinionDeUnaRegionTest #test08OpinionDeUnaRegioTieneQueTenerAlMenosUnSeguidor stamp: 'FP 12/13/2021 22:39:59'!
+ERROR!
+!OpinionDeUnaRegionTest methodsFor: 'tests' stamp: 'FP 12/13/2021 22:40:19' prior: 50880918!
+test08OpinionDeUnaRegioTieneQueTenerAlMenosUnSeguidor
+
+	| opinionDeRegion  |
+	opinionDeRegion := OpinionDeUnaRegion new.
+	
+	self
+		should:[opinionDeRegion opinionDe: self pjHamilton ]
+		raise: Error - MessageNotUnderstood 
+   	 	withExceptionDo: [ :anError | 
+		self assert: OpinionDeUnaRegion noSePuedeOpinarSinSeguidores equals: anError messageText.
+	].
+! !
+!OpinionDeUnaRegion methodsFor: 'initialize' stamp: 'FP 12/13/2021 22:41:46' overrides: 16896425!
+initialize
+	
+	seguidores isEmpty ifTrue:[
+		self error: self class noSePuedeOpinarSinSeguidores	.
+	].
+! !
+!OpinionDeUnaRegionTest methodsFor: 'tests' stamp: 'FP 12/13/2021 22:41:55' prior: 50880937!
+test08OpinionDeUnaRegioTieneQueTenerAlMenosUnSeguidor
+
+	| opinionDeRegion  |
+	opinionDeRegion := OpinionDeUnaRegion new.
+	
+	self
+		should:[opinionDeRegion opinionDe: self pjHamilton ]
+		raise: Error - MessageNotUnderstood 
+   	 	withExceptionDo: [ :anError | 
+		self assert: OpinionDeUnaRegion debeTenerUnSeguidorMensajeError equals: anError messageText.
+	].
+! !
+!OpinionDeUnaRegion methodsFor: 'initialize' stamp: 'FP 12/13/2021 22:42:04' prior: 50880952 overrides: 16896425!
+initialize
+	
+	seguidores isEmpty ifTrue:[
+		self error: self class debeTenerUnSeguidorMensajeError	.
+	].
+! !
+
+!testRun: #OpinionDeUnaRegionTest #test08OpinionDeUnaRegioTieneQueTenerAlMenosUnSeguidor stamp: 'FP 12/13/2021 22:42:05'!
+ERROR!
+!OpinionDeUnaRegion methodsFor: 'initialize' stamp: 'FP 12/13/2021 22:42:37' prior: 50880974 overrides: 16896425!
+initialize
+	
+	seguidores ifNil: [
+		self error: self class debeTenerUnSeguidorMensajeError	.
+	].
+! !
+
+!testRun: #OpinionDeUnaRegionTest #test08OpinionDeUnaRegioTieneQueTenerAlMenosUnSeguidor stamp: 'FP 12/13/2021 22:42:39'!
+ERROR!
+!OpinionDeUnaRegionTest methodsFor: 'tests' stamp: 'FP 12/13/2021 22:43:00' prior: 50880959!
+test08OpinionDeUnaRegioTieneQueTenerAlMenosUnSeguidor
+
+	self
+		should:[OpinionDeUnaRegion new. ]
+		raise: Error - MessageNotUnderstood 
+   	 	withExceptionDo: [ :anError | 
+		self assert: OpinionDeUnaRegion debeTenerUnSeguidorMensajeError equals: anError messageText.
+	].
+! !
+
+!testRun: #OpinionDeUnaRegionTest #test08OpinionDeUnaRegioTieneQueTenerAlMenosUnSeguidor stamp: 'FP 12/13/2021 22:43:03'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:43:03'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:43:03'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 22:43:03'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 22:43:03'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 22:43:03'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test06OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:43:03'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test07OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:43:03'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test08OpinionDeUnaRegioTieneQueTenerAlMenosUnSeguidor stamp: 'FP 12/13/2021 22:43:03'!
+PASSED!
+!OpinionDeUnaRegionTest methodsFor: 'tests - propagacion arriba hacia abajo' stamp: 'FP 12/13/2021 22:43:32'!
+test07pinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion
+
+	| opinionDeRegionChata opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionDelAmplioValle |
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	opinionDePueblo2 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo2.
+	
+	self assert: (opinionDeRegionChata esVistoComoPrometedor: self pjHamilton).
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionDelAmplioValle agregarSeguidor: opinionDePueblo4.
+	
+	opinionDeRegionChata agregarSeguidor: opinionDeRegionDelAmplioValle.
+		
+	self assert: (opinionDeRegionDelAmplioValle esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo3 esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo4 esVistoComoPrometedor: self pjHamilton).! !
+
+!methodRemoval: OpinionDeUnaRegionTest #test07OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:43:32'!
+test07OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion
+
+	| opinionDeRegionChata opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionDelAmplioValle |
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	opinionDePueblo2 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo2.
+	
+	self assert: (opinionDeRegionChata esVistoComoPrometedor: self pjHamilton).
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionDelAmplioValle agregarSeguidor: opinionDePueblo4.
+	
+	opinionDeRegionChata agregarSeguidor: opinionDeRegionDelAmplioValle.
+		
+	self assert: (opinionDeRegionDelAmplioValle esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo3 esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo4 esVistoComoPrometedor: self pjHamilton).!
+!OpinionDeUnaRegionTest methodsFor: 'tests - propagacion arriba hacia abajo' stamp: 'FP 12/13/2021 22:43:42'!
+test06pinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion
+
+	| opinionDeRegionChata opinionDeRioVerde opinionDePueblo1 opinionDePueblo2 |
+	opinionDeRioVerde := OpinionDeUnPueblo new.
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	opinionDePueblo2 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDeRioVerde.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo1.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo2.
+		
+	self assert: (opinionDeRioVerde esVistoComoPrometedor: self pjHamilton).! !
+
+!methodRemoval: OpinionDeUnaRegionTest #test06OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:43:42'!
+test06OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion
+
+	| opinionDeRegionChata opinionDeRioVerde opinionDePueblo1 opinionDePueblo2 |
+	opinionDeRioVerde := OpinionDeUnPueblo new.
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	opinionDePueblo2 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDeRioVerde.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo1.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo2.
+		
+	self assert: (opinionDeRioVerde esVistoComoPrometedor: self pjHamilton).!
+!OpinionDeUnaRegionTest methodsFor: 'tests - propagacion arriba hacia abajo' stamp: 'FP 12/13/2021 22:43:57'!
+test07OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion
+
+	| opinionDeRegionChata opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionDelAmplioValle |
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	opinionDePueblo2 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo2.
+	
+	self assert: (opinionDeRegionChata esVistoComoPrometedor: self pjHamilton).
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionDelAmplioValle agregarSeguidor: opinionDePueblo4.
+	
+	opinionDeRegionChata agregarSeguidor: opinionDeRegionDelAmplioValle.
+		
+	self assert: (opinionDeRegionDelAmplioValle esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo3 esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo4 esVistoComoPrometedor: self pjHamilton).! !
+
+!methodRemoval: OpinionDeUnaRegionTest #test07pinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:43:57'!
+test07pinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion
+
+	| opinionDeRegionChata opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionDelAmplioValle |
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	opinionDePueblo2 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo2.
+	
+	self assert: (opinionDeRegionChata esVistoComoPrometedor: self pjHamilton).
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionDelAmplioValle agregarSeguidor: opinionDePueblo4.
+	
+	opinionDeRegionChata agregarSeguidor: opinionDeRegionDelAmplioValle.
+		
+	self assert: (opinionDeRegionDelAmplioValle esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo3 esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo4 esVistoComoPrometedor: self pjHamilton).!
+!OpinionDeUnaRegionTest methodsFor: 'tests - propagacion arriba hacia abajo' stamp: 'FP 12/13/2021 22:44:05'!
+test06OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion
+
+	| opinionDeRegionChata opinionDeRioVerde opinionDePueblo1 opinionDePueblo2 |
+	opinionDeRioVerde := OpinionDeUnPueblo new.
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	opinionDePueblo2 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDeRioVerde.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo1.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo2.
+		
+	self assert: (opinionDeRioVerde esVistoComoPrometedor: self pjHamilton).! !
+
+!methodRemoval: OpinionDeUnaRegionTest #test06pinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:44:06'!
+test06pinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion
+
+	| opinionDeRegionChata opinionDeRioVerde opinionDePueblo1 opinionDePueblo2 |
+	opinionDeRioVerde := OpinionDeUnPueblo new.
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	opinionDePueblo2 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDeRioVerde.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo1.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo2.
+		
+	self assert: (opinionDeRioVerde esVistoComoPrometedor: self pjHamilton).!
+
+!testRun: #OpinionDeUnaRegionTest #test08OpinionDeUnaRegioTieneQueTenerAlMenosUnSeguidor stamp: 'FP 12/13/2021 22:44:15'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:44:15'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:44:15'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 22:44:15'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 22:44:15'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 22:44:15'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test06OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:44:15'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test07OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:44:15'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test08OpinionDeUnaRegioTieneQueTenerAlMenosUnSeguidor stamp: 'FP 12/13/2021 22:44:15'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test07OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:44:20'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test07OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:44:22'!
+ERROR!
+!OpinionDeUnaRegionTest methodsFor: 'tests' stamp: 'FP 12/13/2021 22:41:55' prior: 50880997!
+test08OpinionDeUnaRegioTieneQueTenerAlMenosUnSeguidor
+
+	| opinionDeRegion  |
+	opinionDeRegion := OpinionDeUnaRegion new.
+	
+	self
+		should:[opinionDeRegion opinionDe: self pjHamilton ]
+		raise: Error - MessageNotUnderstood 
+   	 	withExceptionDo: [ :anError | 
+		self assert: OpinionDeUnaRegion debeTenerUnSeguidorMensajeError equals: anError messageText.
+	].
+! !
+
+!methodRemoval: OpinionDeUnaRegion #initialize stamp: 'FP 12/13/2021 22:45:19'!
+initialize
+	
+	seguidores ifNil: [
+		self error: self class debeTenerUnSeguidorMensajeError	.
+	].
+!
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 22:47:29' prior: 50880488!
+opinionDe: unPersonajeJugador
+	| opinionGeneral |
+	
+	seguidores ifNil: [
+		self error: self class debeTenerUnSeguidorMensajeError 
+	].
+	
+	opinionReferente ifNotNil: [
+		(opinionReferente esVistoComoPrometedor: unPersonajeJugador )  	ifTrue:[
+			^opinionReferente opinionDe: unPersonajeJugador.
+		]
+	].
+
+	opinionGeneral := seguidores count:[:seguidor| 
+		seguidor esVistoComoPrometedorLocal: unPersonajeJugador.
+	].
+	(opinionGeneral <= (seguidores size/2))
+	ifTrue:[
+		^self opinionDesconocido 
+	]
+	ifFalse:[
+		^self opinionPrometedor 
+	]! !
+
+!testRun: #OpinionDeUnaRegionTest #test08OpinionDeUnaRegioTieneQueTenerAlMenosUnSeguidor stamp: 'FP 12/13/2021 22:50:18'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:50:18'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:50:18'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 22:50:18'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 22:50:18'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 22:50:18'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test06OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:50:18'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test07OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:50:18'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test08OpinionDeUnaRegioTieneQueTenerAlMenosUnSeguidor stamp: 'FP 12/13/2021 22:50:18'!
+PASSED!
+
+OpinionZonas subclass: #OpinionNill
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+
+!classDefinition: #OpinionNill category: 'AlgoIII-PNJ-2021-2C-2doParcial' stamp: 'FP 12/13/2021 22:51:16'!
+OpinionZonas subclass: #OpinionNill
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 22:55:16'!
+seguidores
+	^seguidores ! !
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 22:56:43' prior: 50881395!
+opinionDe: unPersonajeJugador
+	| opinionGeneral seguidoresParaRecorrer |
+	
+	seguidores ifNil: [
+		self error: self class debeTenerUnSeguidorMensajeError 
+	].
+	
+	seguidoresParaRecorrer:=seguidores
+	
+	opinionReferente ifNotNil: [
+		seguidoresParaRecorrer:=opinionReferente seguidores 
+	].
+
+	opinionGeneral := seguidores count:[:seguidor| 
+		seguidor esVistoComoPrometedorLocal: unPersonajeJugador.
+	].
+	(opinionGeneral <= (seguidores size/2))
+	ifTrue:[
+		^self opinionDesconocido 
+	]
+	ifFalse:[
+		^self opinionPrometedor 
+	]! !
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 22:57:05' prior: 50881475!
+opinionDe: unPersonajeJugador
+	| opinionGeneral seguidoresParaRecorrer |
+	
+	seguidores ifNil: [
+		self error: self class debeTenerUnSeguidorMensajeError 
+	].
+	
+	seguidoresParaRecorrer :=seguidores
+	
+	opinionReferente ifNotNil: [
+		seguidoresParaRecorrer:=opinionReferente seguidores 
+	].
+
+	opinionGeneral := seguidoresParaRecorrer count:[:seguidor| 
+		seguidor esVistoComoPrometedorLocal: unPersonajeJugador.
+	].
+	(opinionGeneral <= (seguidores size/2))
+	ifTrue:[
+		^self opinionDesconocido 
+	]
+	ifFalse:[
+		^self opinionPrometedor 
+	]! !
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 22:57:08' prior: 50881495!
+opinionDe: unPersonajeJugador
+	| opinionGeneral seguidoresParaRecorrer |
+	
+	seguidores ifNil: [
+		self error: self class debeTenerUnSeguidorMensajeError 
+	].
+	
+	seguidoresParaRecorrer :=seguidores.
+	
+	opinionReferente ifNotNil: [
+		seguidoresParaRecorrer:=opinionReferente seguidores 
+	].
+
+	opinionGeneral := seguidoresParaRecorrer count:[:seguidor| 
+		seguidor esVistoComoPrometedorLocal: unPersonajeJugador.
+	].
+	(opinionGeneral <= (seguidores size/2))
+	ifTrue:[
+		^self opinionDesconocido 
+	]
+	ifFalse:[
+		^self opinionPrometedor 
+	]! !
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:57:19'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 22:57:19'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 22:57:19'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 22:57:19'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 22:57:19'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test06OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:57:19'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test07OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 22:57:19'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test08OpinionDeUnaRegioTieneQueTenerAlMenosUnSeguidor stamp: 'FP 12/13/2021 22:57:19'!
+PASSED!
+!OpinionDeUnPueblo methodsFor: 'public' stamp: 'FP 12/13/2021 23:02:09' prior: 50879911!
+opinionDe: unPersonajeJugador
+
+	opinionReferente ifNotNil: [
+		(opinionReferente esVistoComoPrometedor: unPersonajeJugador )  	ifTrue:[
+			^opinionReferente opinionDe: unPersonajeJugador .
+		]
+	].
+
+	^opiniones at: unPersonajeJugador ifAbsent: [self opinionDesconocido]
+! !
+
+!classRemoval: #OpinionNill stamp: 'FP 12/13/2021 23:12:37'!
+OpinionZonas subclass: #OpinionNill
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'AlgoIII-PNJ-2021-2C-2doParcial'!
+!OpinionDeUnPueblo methodsFor: 'public' stamp: 'FP 12/13/2021 23:13:38' prior: 50881574!
+opinionDe: unPersonajeJugador
+
+	opinionReferente ifNotNil: [
+		(opinionReferente esVistoComoPrometedor: unPersonajeJugador )  
+		ifTrue:[
+			^opinionReferente opinionDe: unPersonajeJugador .
+		]
+	].
+
+	^opiniones at: unPersonajeJugador ifAbsent: [self opinionDesconocido]
+! !
+
+0 to: 10!
+
+(0 to: 10) sum: [:a| a]!
+!OpinionDeUnaRegionTest methodsFor: 'personajes' stamp: 'FP 12/13/2021 23:20:16'!
+crearRegionConCantidadDePueblos: unaCantidad conPersonajeComoPrometedorEnPueblos: unPersonaje
+	
+	| opinionDePueblo opinionDeRegion |
+	opinionDePueblo := OpinionDeUnPueblo new.
+	opinionDePueblo verComoPrometedorA: unPersonaje.
+
+	opinionDeRegion := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo.
+ 	[0 to: unaCantidad -1] do: [:i| | nuevaOpinionDePueblo |
+		nuevaOpinionDePueblo := OpinionDeUnPueblo new.
+		nuevaOpinionDePueblo verComoPrometedorA: unPersonaje.
+		opinionDeRegion agregarSeguidor: nuevaOpinionDePueblo.
+	].
+
+	^opinionDeRegion! !
+!OpinionDeUnaRegionTest methodsFor: 'tests - propagacion arriba hacia abajo' stamp: 'FP 12/13/2021 23:21:22' prior: 50881188!
+test07OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion
+
+	| opinionDeRegionChata opinionDePueblo3 opinionDePueblo4 opinionDeRegionDelAmplioValle |
+	
+	opinionDeRegionChata := self crearRegionConCantidadDePueblos: 2 conPersonajeComoPrometedorEnPueblos: self pjHamilton.
+	
+	
+	self assert: (opinionDeRegionChata esVistoComoPrometedor: self pjHamilton).
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionDelAmplioValle agregarSeguidor: opinionDePueblo4.
+	
+	opinionDeRegionChata agregarSeguidor: opinionDeRegionDelAmplioValle.
+		
+	self assert: (opinionDeRegionDelAmplioValle esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo3 esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo4 esVistoComoPrometedor: self pjHamilton).! !
+
+!testRun: #OpinionDeUnaRegionTest #test07OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 23:21:29'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test07OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 23:21:39'!
+ERROR!
+!OpinionDeUnaRegionTest methodsFor: 'personajes' stamp: 'FP 12/13/2021 23:22:13' prior: 50881606!
+crearRegionConCantidadDePueblos: unaCantidad conPersonajeComoPrometedorEnPueblos: unPersonaje
+	
+	| opinionDePueblo opinionDeRegion |
+	opinionDePueblo := OpinionDeUnPueblo new.
+	opinionDePueblo verComoPrometedorA: unPersonaje.
+
+	opinionDeRegion := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo.
+ 	[0 to: (unaCantidad - 1)] do: [:i| | nuevaOpinionDePueblo |
+		nuevaOpinionDePueblo := OpinionDeUnPueblo new.
+		nuevaOpinionDePueblo verComoPrometedorA: unPersonaje.
+		opinionDeRegion agregarSeguidor: nuevaOpinionDePueblo.
+	].
+
+	^opinionDeRegion! !
+
+!testRun: #OpinionDeUnaRegionTest #test01RegionConUnSeguidorVePjDesconocidoPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 23:22:14'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test02RegionConUnSeguidorVePjPrometedorPorSeguidorComoDesconocido stamp: 'FP 12/13/2021 23:22:14'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test03RegionConMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoDesconocido stamp: 'FP 12/13/2021 23:22:14'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test04RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedor stamp: 'FP 12/13/2021 23:22:14'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test05RegionConMasDeLaMitadDeLosSeguidoresViendoAPjComoPrometedorVeAPjComoPrometedorCuandoContieneUnaRegionComoSeguidor stamp: 'FP 12/13/2021 23:22:14'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test06OpinionDePuebloVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 23:22:14'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test07OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 23:22:14'!
+ERROR!
+
+!testRun: #OpinionDeUnaRegionTest #test08OpinionDeUnaRegioTieneQueTenerAlMenosUnSeguidor stamp: 'FP 12/13/2021 23:22:14'!
+PASSED!
+
+!testRun: #OpinionDeUnaRegionTest #test07OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion stamp: 'FP 12/13/2021 23:22:14'!
+ERROR!
+!OpinionDeUnaRegionTest methodsFor: 'tests - propagacion arriba hacia abajo' stamp: 'FP 12/13/2021 22:43:57' prior: 50881627!
+test07OpinionDeUnaRegionVeAPersonajeDesconocidoComoPrometedorIgualALaOpinionDeLaRegion
+
+	| opinionDeRegionChata opinionDePueblo1 opinionDePueblo2 opinionDePueblo3 opinionDePueblo4 opinionDeRegionDelAmplioValle |
+	
+	opinionDePueblo1 := OpinionDeUnPueblo new.
+	opinionDePueblo1 verComoPrometedorA: self pjHamilton.
+	
+	opinionDePueblo2 := OpinionDeUnPueblo new.
+	opinionDePueblo2 verComoPrometedorA: self pjHamilton.
+	
+	opinionDeRegionChata := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo1.
+	opinionDeRegionChata agregarSeguidor: opinionDePueblo2.
+	
+	self assert: (opinionDeRegionChata esVistoComoPrometedor: self pjHamilton).
+	
+	opinionDePueblo3 := OpinionDeUnPueblo new.
+	
+	opinionDePueblo4 := OpinionDeUnPueblo new.
+	
+	opinionDeRegionDelAmplioValle := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo3.
+	opinionDeRegionDelAmplioValle agregarSeguidor: opinionDePueblo4.
+	
+	opinionDeRegionChata agregarSeguidor: opinionDeRegionDelAmplioValle.
+		
+	self assert: (opinionDeRegionDelAmplioValle esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo3 esVistoComoPrometedor: self pjHamilton).
+	self assert: (opinionDePueblo4 esVistoComoPrometedor: self pjHamilton).! !
+
+!methodRemoval: OpinionDeUnaRegionTest #crearRegionConCantidadDePueblos:conPersonajeComoPrometedorEnPueblos: stamp: 'FP 12/13/2021 23:22:50'!
+crearRegionConCantidadDePueblos: unaCantidad conPersonajeComoPrometedorEnPueblos: unPersonaje
+	
+	| opinionDePueblo opinionDeRegion |
+	opinionDePueblo := OpinionDeUnPueblo new.
+	opinionDePueblo verComoPrometedorA: unPersonaje.
+
+	opinionDeRegion := OpinionDeUnaRegion conUnSeguidor: opinionDePueblo.
+ 	[0 to: (unaCantidad - 1)] do: [:i| | nuevaOpinionDePueblo |
+		nuevaOpinionDePueblo := OpinionDeUnPueblo new.
+		nuevaOpinionDePueblo verComoPrometedorA: unPersonaje.
+		opinionDeRegion agregarSeguidor: nuevaOpinionDePueblo.
+	].
+
+	^opinionDeRegion!
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 23:23:53' prior: 50881515!
+opinionDe: unPersonajeJugador
+	| opinionGeneral seguidoresParaRecorrer |
+	
+	seguidores ifNil: [
+		self error: self class debeTenerUnSeguidorMensajeError 
+	].
+	
+	seguidoresParaRecorrer :=seguidores.
+	
+	opinionReferente ifNotNil: [
+		seguidoresParaRecorrer:=opinionReferente seguidores 
+	].
+
+	opinionGeneral := seguidoresParaRecorrer count:[:seguidor| 
+		seguidor esVistoComoPrometedorLocal: unPersonajeJugador.
+	].
+	(opinionGeneral <= (seguidores size/2))
+	ifTrue:[
+		^self opinionDesconocido 
+	]
+	ifFalse:[
+		^self opinionPrometedor 
+	]! !
+!OpinionDeUnaRegion methodsFor: 'public' stamp: 'FP 12/13/2021 23:24:00' prior: 50881798!
+opinionDe: unPersonajeJugador
+	| opinionGeneral seguidoresParaRecorrer |
+	
+	seguidores ifNil: [
+		self error: self class debeTenerUnSeguidorMensajeError 
+	].
+	
+	seguidoresParaRecorrer := seguidores.
+	
+	opinionReferente ifNotNil: [
+		seguidoresParaRecorrer:=opinionReferente seguidores 
+	].
+
+	opinionGeneral := seguidoresParaRecorrer count:[:seguidor| 
+		seguidor esVistoComoPrometedorLocal: unPersonajeJugador.
+	].
+	(opinionGeneral <= (seguidores size/2))
+	ifTrue:[
+		^self opinionDesconocido 
+	]
+	ifFalse:[
+		^self opinionPrometedor 
+	]! !
+
+----QUIT----(13 December 2021 23:31:38) CuisUniversity-4532.image priorSource: 17319451!

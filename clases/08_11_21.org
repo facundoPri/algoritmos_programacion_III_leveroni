@@ -1,0 +1,20 @@
+#+TITLE: 08 11 21
+* TDD (test driven development)
+** Como hacer TDD?
+1. Escribir un test que falle
+   - Es mas sencillo que se nos ocurra
+   - Debe fallar al ejecutarlos
+2. Lograr que todo los tests pasen
+   - Implmentacion mas simple posible
+   - No abarcar demas
+3. Se puede mejorar? refactorizar
+   - Deben seguir pasando los test
+** Estructura de un Test
+- Setup
+    Definir el contexto/ escenario inicial.
+    Pre-Condicion
+- Exercise
+    Ejercitar la funcionalidad que queremos testear
+- Assert
+    Verificar que sucede lo esperado.
+    Post-condicion
